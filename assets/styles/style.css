@@ -1,0 +1,41 @@
+
+
+/* START Общие свойства */
+html{
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none ;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #808080;
+}
+/* END Общие свойства */
+
+
+
+/* START HEADER */
+header{
+    padding: 0 calc(50% - 590px);  /* Используем css свойства за место дополнительного .container и центрирование контента*/
+
+    position: fixed;
+    background-color: #111;
+    z-index: 999;
+    box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
+    width: 100%;
+}
+
+/* END HEADER */
+
+main{
+    height: 900px;
+}
+
+
