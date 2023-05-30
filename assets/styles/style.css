@@ -30,6 +30,16 @@ header{
     z-index: 999;
     box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
     width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav_menu{
+    display: flex;
 }
 
 /* END HEADER */
