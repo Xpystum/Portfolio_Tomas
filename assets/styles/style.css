@@ -23,8 +23,9 @@ body{
 
 /* START HEADER */
 header{
+    box-sizing: border-box;
+    padding: 0 10px;
     padding: 0 calc(50% - 590px);  /* Используем css свойства за место дополнительного .container и центрирование контента*/
-
     position: fixed;
     background-color: #111;
     z-index: 999;
@@ -38,8 +39,11 @@ header{
 
 }
 
-.nav_menu{
+.nav_menu ul{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }
 
 /* END HEADER */
