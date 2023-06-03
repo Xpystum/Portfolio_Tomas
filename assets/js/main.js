@@ -1,3 +1,5 @@
+"use strict";
+
 import burger from './burger.js';
 
-new burger(".button_burger");
+new burger(".menu__button-burger",".nav-menu");

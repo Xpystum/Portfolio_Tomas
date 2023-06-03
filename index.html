@@ -7,63 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomas Portfolio</title>
 
-   
-
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/displayflex.css">
 </head>
 <body>
     <!-- START HEADER -->
-    <header>
-            <div class="container_header">
-                <!-- START LOGO -->
-                <a href="#" alt="TOMAS">tomas</a>
-                <!-- END LOGO -->
+ <header class="header">
 
-                <!-- START MENU + BURGER -->
-                <div class="menu_div">
-                    <div class="button_burger">
-                        <!-- <span></span> -->
-                    </div>
-                    <!-- START Navigation block -->
-                    <nav class="nav_menu">
-                        <ul>
-                            <li>
-                                <a href="">About</a>
-                            </li>
+     <div class="header__container container">
+         <!-- START LOGO -->
+         <div class="container__logo logo">
+             <a href="#" alt="TOMAS" class="logo__link">TOMAS</a>
+         </div>
+         <!-- END LOGO -->
 
-                            <li>
-                                <a href="">Services</a>
-                            </li>
+         <!-- START MENU + BURGER -->
+             <div class="menu__button-burger button-burger" >
+                <span class="button-burger__span-mid span-burger"></span>
+                <span class="button-burger__span-top span-burger"></span>
+                <span class="button-burger__span-bottom span-burger"></span>
+             </div>
+             <!-- START Navigation block -->
+             <nav class="nav-menu menu">
+                 <ul class="nav-menu__list list">   
+                     <li class="list__item">
+                         <a href="">About</a>
+                     </li class="list__item">
 
-                            <li>
-                                <a href="">Resume</a>
-                            </li>
+                     <li class="list__item">
+                         <a href="">Services</a>
+                     </li>
 
-                            <li>
-                                <a href="">Portfolio</a>
-                            </li>
+                     <li class="list__item">
+                         <a href="">Resume</a>
+                     </li>
 
-                            <li>
-                                <a href="">Reviews</a>
-                            </li>
+                     <li class="list__item">
+                         <a href="">Portfolio</a>
+                     </li>
 
-                            <li>
-                                <a href="">Blog</a>
-                            </li>
+                     <li class="list__item">
+                         <a href="">Reviews</a>
+                     </li>
 
-                            <li>
-                                <a href="">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- END Navigation block -->
-                </div>
-                <!-- START MENU + BURGER -->
+                     <li class="list__item">
+                         <a href="">Blog</a>
+                     </li>
 
-        </div>
-    </header>
+                     <li class="list__item">
+                         <a href="">Contact</a>
+                     </li>
+                 </ul>
+             </nav>
+             <!-- END Navigation block -->
+         <!-- END MENU + BURGER -->
+     </div>
+
+ </header>
     <!-- END HEADER -->
 
     <main>
@@ -73,4 +74,4 @@
     <script type="module" src="assets/js/main.js"></script>
 </body>
 
-</html> 
+</html>

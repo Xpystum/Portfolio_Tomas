@@ -2,17 +2,30 @@
 
 export default class burger {
 
-    constructor(elementID){
-        let ElDiv = document.querySelector(elementID);
-        let creatEl = document.createElement("span");
+    constructor(elementClass, menuClass = null){
+        let ElBurger = document.querySelector(elementClass);
+        let ElMenu = document.querySelector(menuClass);
+        this.setEventClick(ElBurger,ElMenu  );
 
-        ElDiv.appendChild(creatEl);
-        console.log(ElDiv);
+
+
+        // console.log(ElDiv);
+
 
     }
 
-    setCss(){
-        
+
+
+    setEventClick(ElBurger, ElMenu = null){
+        ElBurger.addEventListener("click",(evt)=>{
+            ElBurger.classList.toggle("menu__button-burger_active");
+            ElMenu != null ? ElMenu.classList.toggle("nav-menu_active"): "" ;
+        });
+    }
+
+
+    setCss(ElDiv,creatEl){
+
     }
 
 

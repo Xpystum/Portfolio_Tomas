@@ -38,94 +38,99 @@ header{
    
 }
 
-.container_header{
+.header__container{
     position: relative;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.container{
+    
+    margin: 0 auto;
+    width: 1320px;
+
+    box-sizing: border-box;
     padding: 0 12px;
 }
 
-.container_header > a{
+
+
+.container__logo .logo__link{
     color: #fff;
+
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
     font-size: 40px;
-    line-height: 60px;
+    line-height: 60px;  
+}
+
+.container__logo .logo__link:active{
+    color: #f00;
 }
 
 /* START BUTTON Burger */
 
-.button_burger{
-    display: block;
+.menu__button-burger{
+
+
+    display: none;
     position: relative;
-    width: 45px;
-    height: 35px;
+    width: 50px;
+    height: 40px;
     cursor: pointer;
 }
 
-.button_burger span{
+.span-burger{
+
     display: block;
     position: absolute;
-    /* display: none; */
-    left: 0;
-    top: 50%;
-    transform: scale(1) translate(0px,-50%);
 
     background-color: #fff;
     height: 12%;
     width: 100%;
     border-radius: 50px;
+    transition: all 0.5s ease 0s;
 }
 
-.button_burger::before{
 
-    content: " ";
-    position: absolute;
+
+.button-burger__span-mid{
+    left: 0;
+    top: 45%;
+
+}
+
+.button-burger__span-top{
     left: 0;
     top: 10%;
-    background-color: #fff;
-    height: 12%;
-    width: 100%;
-    border-radius: 50px;
+
 }
 
-.button_burger::after{
-    
-    content: " ";
-    position: absolute;
+.button-burger__span-bottom{
     left: 0;
-    top: 85%;
-    transform: scale(1) translate(0px,-50%);   
-    background-color: #fff;
-    height: 12%;
-    width: 100%;
-    border-radius: 50px;
+    top: 80%;
 }
 
 /* END BUTTON Burger */
 
-.nav_menu{
-    display: none;
-}
-
-.nav_menu ul{
+.nav-menu__list{
     display: flex;
     flex-direction: row;
     position: relative;
-    list-style: none;
 
 }
 
-.nav_menu ul li {
+.nav-menu .nav-menu__list li {
 
     margin: 0 5px;
 }
 
-.nav_menu ul li a{
+.nav-menu .nav-menu__list li a{
     display: block;
     font-weight: 700;
     line-height: 24px;
@@ -134,19 +139,14 @@ header{
     letter-spacing: 1px;
 }
 
+/* END HEADER */
+
 /* BreakPoint */
+ 
 
-@media (max-width: 1201) {
+@media (min-width: 1201px) and (max-width: 1400px) {
 
-    .container_header{
-        width: 1320px;
-    }
-
-}   
-
-@media (min-width: 1201px) {
-
-    .container_header{
+    .container{
         width: 1140px;
     }
 
@@ -154,7 +154,7 @@ header{
 
 @media (min-width: 993px) and (max-width: 1200px) {
 
-    .container_header{
+    .container{
         width: 960px;
     }
 }
@@ -163,7 +163,7 @@ header{
 @media (min-width: 768px) and (max-width: 992px) {
 
 
-    .container_header{
+    .container{
         width: 720px;
     }
 
@@ -171,7 +171,7 @@ header{
 
 @media (max-width: 767px) {
 
-    .container_header{
+    .container{
         width: 540px;
     }
 
@@ -179,12 +179,78 @@ header{
 
 @media (max-width: 560px) {
 
-    .container_header{
+    .container{
         width: 100%;
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
 
+}
+
+@media (max-width: 992px){
+    /* Прячем меню - показываем бургер */
+
+    .menu__button-burger{
+        display: block;
+    }
+
+    /* START логика для js */
+
+    /* бургер */
+
+   .menu__button-burger_active > .button-burger__span-top{
+        top: 45%;
+        transform: rotate(-230deg) translate(0, -40%);
+   }
+
+   .menu__button-burger_active > .button-burger__span-mid{
+    transition: all 0.3s ease 0s;
+         transform: scale(0) translate(0px, 50%);
+   }
+
+   .menu__button-burger_active > .button-burger__span-bottom{
+        top: 50%;
+        transform: rotate(230deg) translate(0, 40%);
+   }
+
+
+   
+    /* меню */
+
+    .nav-menu{
+    
+        visibility: hidden;
+        max-height: 0;
+   }
+
+    .header__container{
+        flex-wrap: wrap;
+        transition: all 0.5s ease-out;
+   }
+
+   .nav-menu_active .nav-menu__list{
+        max-height: 60vh;
+        transition: all 0.5s ease-out;
+
+   }
+
+   .nav-menu_active .nav-menu__list{
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+   }    
+
+    .nav-menu_active{
+        visibility: visible;
+        max-height: 200px;
+        width: 100%;
+        display: block;
+        transition: all 0.4s ease-out;
+    }
+   
+
+   /* END логика для js */
+  
 }
 
 
