@@ -1,4 +1,6 @@
-
+/* Шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+/* Шрифт */
 
 /* START Общие свойства */
 html{
@@ -6,16 +8,18 @@ html{
 }
 
 a{
-    text-decoration: none ;
+    text-decoration: none;
+    display: block;
 }
 
-body{
-    font-family: 'PT Sans', sans-serif;
 
+body{
+    font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background-color: #808080;
+    background-color: #111;
+
 }
 /* END Общие свойства */
 
@@ -23,33 +27,243 @@ body{
 
 /* START HEADER */
 header{
-    box-sizing: border-box;
-    padding: 0 10px;
-    padding: 0 calc(50% - 590px);  /* Используем css свойства за место дополнительного .container и центрирование контента*/
+
+    width: 100%;
+
     position: fixed;
     background-color: #111;
     z-index: 999;
     box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
-    width: 100%;
+    padding: 15px 0;
+   
+}
 
+.header__container{
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
+    overflow: hidden;
 }
 
-.nav_menu ul{
+.container{
+    
+    margin: 0 auto;
+    width: 1320px;
+
+    box-sizing: border-box;
+    padding: 0 12px;
+}
+
+
+
+.container__logo .logo__link{
+    color: #fff;
+
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 40px;
+    line-height: 60px;  
+}
+
+.container__logo .logo__link:active{
+    color: #f00;
+}
+
+/* START BUTTON Burger */
+
+.menu__button-burger{
+
+
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.span-burger{
+
+    display: block;
+    position: absolute;
+
+    background-color: #fff;
+    height: 12%;
+    width: 100%;
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+
+
+.button-burger__span-mid{
+    left: 0;
+    top: 45%;
+
+}
+
+.button-burger__span-top{
+    left: 0;
+    top: 10%;
+
+}
+
+.button-burger__span-bottom{
+    left: 0;
+    top: 80%;
+}
+
+/* END BUTTON Burger */
+
+.nav-menu__list{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    position: relative;
+
+}
+
+.nav-menu .nav-menu__list li {
+
+    margin: 0 5px;
+}
+
+.nav-menu .nav-menu__list li a{
+    display: block;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    padding: 8px 8px;
+    letter-spacing: 1px;
 }
 
 /* END HEADER */
 
+/* BreakPoint */
+ 
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+
+    .container{
+        width: 1140px;
+    }
+
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    .container{
+        width: 960px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 992px) {
+
+
+    .container{
+        width: 720px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .container{
+        width: 540px;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .container{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+}
+
+@media (max-width: 992px){
+    /* Прячем меню - показываем бургер */
+
+    .menu__button-burger{
+        display: block;
+    }
+
+    /* START логика для js */
+
+    /* бургер */
+
+   .menu__button-burger_active > .button-burger__span-top{
+        top: 45%;
+        transform: rotate(-230deg) translate(0, -40%);
+   }
+
+   .menu__button-burger_active > .button-burger__span-mid{
+    transition: all 0.3s ease 0s;
+         transform: scale(0) translate(0px, 50%);
+   }
+
+   .menu__button-burger_active > .button-burger__span-bottom{
+        top: 50%;
+        transform: rotate(230deg) translate(0, 40%);
+   }
+
+
+   
+    /* меню */
+
+    .nav-menu{
+    
+        visibility: hidden;
+        
+        max-height: 0;
+   }
+
+    .header__container{
+        flex-wrap: wrap;
+   }
+
+   .nav-menu_active .nav-menu__list{
+        max-height: 60vh;
+
+   }
+
+   .nav-menu_active .nav-menu__list{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        overflow: auto;
+
+   }    
+
+    .nav-menu_active{
+        visibility: visible;
+        max-height: 200px;
+        width: 100%;
+        display: block;
+        transition: all 0.4s ease-out;
+    }
+   
+
+   /* END логика для js */
+  
+}
+
+
+/* END HEADER */
+
 main{
-    height: 900px;
+    height: 900px;  
 }
 
 
