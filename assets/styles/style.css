@@ -1,20 +1,54 @@
 /* Шрифт */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Шрифт */
 
 /* START Общие свойства */
 html{
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size:calc(14px + 14 * (100vw - 540px) / 1320);
 }
 
-a{
+
+
+a{  
     text-decoration: none;
     display: block;
 }
 
+hr{
+    border-width: 5px;
+}
+
+.hidden_elem{
+    visibility: hidden;
+}
+
+.display_none{
+    display: none;
+}
+
+/* START scrollbar */
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background: rgb(17,17,17);
+}
+
+::-webkit-scrollbar-thumb{  /* ползунок */
+
+    background: #f00;
+    border-radius: 10px;
+
+}
+
+/* END scrollbar */
+
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -30,7 +64,7 @@ header{
 
     width: 100%;
 
-    position: fixed;
+    position: sticky;
     background-color: #111;
     z-index: 999;
     box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
@@ -52,8 +86,8 @@ header{
     
     margin: 0 auto;
     width: 1320px;
-
     box-sizing: border-box;
+
     padding: 0 12px;
 }
 
@@ -118,13 +152,15 @@ header{
 
 /* END BUTTON Burger */
 
-.nav-menu__list{
+.list{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     position: relative;
+}
 
+.nav-menu__list{
+   justify-content: space-around;
 }
 
 .nav-menu .nav-menu__list li {
@@ -143,7 +179,119 @@ header{
 
 /* END HEADER */
 
+/* START MAIN */
+
+main{
+    width: 100%;
+    color: white;
+    height: 900px;
+}
+
+/* START ONE SECTION */
+.section{
+    padding-top: 25px;
+}
+
+.main-section-one{
+    width: 100%;
+    background-image: url("../images/tomas_dark.jpg");
+    background-repeat: no-repeat;
+    background-position:right center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main-section-one__container{
+    position: relative;
+    top:45%;
+    transform: translate(0,-50%);
+}
+
+.content-section__into{
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+}
+
+.content-section__into:before{
+    content: " ";
+    position: absolute;
+    top:-5px;
+    left: -10px;
+    z-index: -1;
+    width: 35px;
+    height: 35px;
+    background: #eb2f06;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.container__content-section-one{
+    color:#fff;
+}
+
+.content-section__name{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.content-section__name span{
+    color: #eb2f06;
+}
+
+.content-section__title-clip{
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.list_item-link{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 40px;
+    height: 40px;
+    color: #eb2f06;
+    margin: 0 5px;
+    border: 2px solid #eb2f06;
+    border-radius: 50%;
+}
+
+.list_item-link:hover{
+    background-color: #eb2f06;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.content-section_clips::after{
+
+    content: " ";
+    position: relative;
+    right: -3px;
+    top: 0;
+
+    border: 1px solid #eb2f06;
+    min-height: 100%;
+}
+
+
+
+/* END ONE SECTION */
+
+
+/* END MAIN */
+
+
+
+
 /* BreakPoint */
+
  
 
 @media (min-width: 1201px) and (max-width: 1400px) {
@@ -169,6 +317,8 @@ header{
         width: 720px;
     }
 
+    
+
 }
 
 @media (max-width: 767px) {
@@ -176,6 +326,46 @@ header{
     .container{
         width: 540px;
     }
+
+    /* START SECTIO ONE */
+
+    .container__content-section-one{
+        text-align: center;
+    }
+
+    .content-section__links_social{
+        justify-content: center;
+
+    }
+
+    .content-section__into{
+        margin: 0 auto;
+    }
+
+    .content-section{
+        font-size: 2.5rem !important;
+    }
+
+    .main-section-one{
+        max-height: 100%;
+    }
+
+    .content-section__links_social{
+        font-size: 1.2rem;
+        
+    }
+
+    .list_item-link{
+        width: 30px;
+        height: 30px;
+    }
+
+    .main-section-one__container{
+        top:50%;
+    }
+
+    /* END SECTIO ONE */
+
 
 }
 
@@ -243,6 +433,7 @@ header{
         align-items: flex-start;
 
         overflow: auto;
+        
 
    }    
 
@@ -256,14 +447,16 @@ header{
    
 
    /* END логика для js */
+
+
+ 
   
 }
 
 
-/* END HEADER */
 
-main{
-    height: 900px;  
-}
+
+
+
 
 
