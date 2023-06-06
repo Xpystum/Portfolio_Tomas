@@ -60,7 +60,11 @@ body{
     line-height: 1.5;
     background-color: #111;
 
+    /* padding-top: 75px; */
+
 }
+
+
 /* END Общие свойства */
 
 
@@ -69,14 +73,20 @@ body{
 header{
 
     width: 100%;
-
-    position: fixed;
+    max-height: 90px;
     background-color: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 999;
-    box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
     padding: 15px 0;
-   
+    box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
+
+    transition: 0.3s;
+
 }
+
+
 
 
 .header__container{
@@ -87,6 +97,7 @@ header{
     justify-content: space-between;
 
     overflow: hidden;
+
 }
 
 .container{
@@ -211,9 +222,11 @@ main{
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
+    padding-top: 90px;
 }
 
 .main-section-one__container{
+   
     position: relative;
     top:45%;
     transform: translate(0,-50%);

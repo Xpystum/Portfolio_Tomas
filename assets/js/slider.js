@@ -1,9 +1,11 @@
-export default class slider{
+"use strict";
+
+export default class Slider{
     constructor(Element){
 
         // setTimeout позволяет вызвать функцию один раз через определённый интервал времени.
         // setInterval позволяет вызывать функцию регулярно, повторяя вызов через определённый интервал времени.
-        let El = document.querySelector(".content-section_clips");
+        let El = document.querySelector(Element);
         this.Slider(El);
 
 
