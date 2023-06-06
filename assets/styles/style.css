@@ -27,6 +27,12 @@ hr{
     display: none;
 }
 
+.display_block{
+    display: block !important;
+}
+
+
+
 /* START scrollbar */
 ::-webkit-scrollbar{
     width: 8px;
@@ -64,13 +70,14 @@ header{
 
     width: 100%;
 
-    position: sticky;
+    position: fixed;
     background-color: #111;
     z-index: 999;
     box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
     padding: 15px 0;
    
 }
+
 
 .header__container{
     position: relative;
@@ -163,6 +170,10 @@ header{
    justify-content: space-around;
 }
 
+.list__item{
+    font-size: 0.8rem;
+}
+
 .nav-menu .nav-menu__list li {
 
     margin: 0 5px;
@@ -242,11 +253,80 @@ main{
 }
 
 .content-section__title-clip{
-    font-size: 4.5rem;
+    position: relative;
+    font-size: 4rem;
     font-weight: 900;
     margin-bottom: 10px;
     display: inline-block;
+
+    
+
 }
+
+.content-section_clips{
+
+
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+    padding-right: 15px;
+
+    animation-name: slider;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
+
+
+
+    border-right: 2px solid #eb2f06;
+}
+
+.clips__b{
+    display: none;
+    padding-right: 10px;
+}
+
+.clips__b:nth-child(3){
+    padding-right: 60px;
+}
+
+.clips__b:nth-child(2){
+    padding-right: 20px;
+}
+
+
+
+@keyframes slider {
+
+    0% {
+
+        width: 75%;
+        padding-right: 10px;
+      }
+
+      40% {
+
+        width: 75%;
+        padding-right: 10px;
+
+      }
+
+      95%{
+        width: 0%;
+        padding-right: 0px;
+      }
+    
+      100% {
+
+        width: 0%;
+        padding-right: 0px;
+      }
+    
+}
+
+
 
 .list_item-link{
 
@@ -269,16 +349,6 @@ main{
     transition: 0.3s ease;
 }
 
-.content-section_clips::after{
-
-    content: " ";
-    position: relative;
-    right: -3px;
-    top: 0;
-
-    border: 1px solid #eb2f06;
-    min-height: 100%;
-}
 
 
 
@@ -363,6 +433,61 @@ main{
     .main-section-one__container{
         top:50%;
     }
+
+
+    /* START SLIDER */
+
+    .clips__b{
+        display: none;
+        padding-right: 5px;
+    }
+    
+    .clips__b:nth-child(3){
+        padding-right: 25px;
+    }
+    
+    .clips__b:nth-child(2){
+        padding-right: 5px;
+    }
+
+    .clips__b:nth-child(1){
+        padding-right: 2px;
+    }
+
+
+
+
+   @keyframes slider { 
+
+        0% {
+    
+            width: 75%;
+            padding-right: 5px;
+          }
+    
+          40% {
+    
+            width: 75%;
+            padding-right: 5px;
+    
+          }
+    
+          95%{
+            width: 0%;
+            padding-right: 0px;
+          }
+        
+          100% {
+    
+            width: 0%;
+            padding-right: 0px;
+          }
+        
+    } 
+
+
+    /* END SLIDER */
+
 
     /* END SECTIO ONE */
 
