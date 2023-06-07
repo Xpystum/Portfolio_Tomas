@@ -4,17 +4,20 @@ export default class ShirinkMenu{
 
     constructor(){
 
-        if (window.pageYOffset > 10) {
+        document.addEventListener("scroll", (event)=>{
 
-            document.querySelector("header").style.padding = "6px 0";
-            
-        }
-        else{
+            if (window.pageYOffset > 200) {
 
-            document.querySelector("header").style.padding = "15px 0";
-
-        }
-
-    }
+                document.querySelector("header").style.padding = "6px 0";
+                
+            }
+            else{
     
+                document.querySelector("header").style.padding = "15px 0";
+    
+            }
+        });
+       
+    }
+
 }

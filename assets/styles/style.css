@@ -291,6 +291,9 @@ main{
     animation-duration: 1.2s;
     animation-timing-function: ease-in;
 
+    /* test */
+    transition: all 0.9s ease;
+
 
 
     border-right: 2px solid #eb2f06;
@@ -299,6 +302,7 @@ main{
 .clips__b{
     display: none;
     padding-right: 10px;
+    transition: all 0.9s ease;
 }
 
 .clips__b:nth-child(3){
@@ -549,14 +553,15 @@ main{
 
     .nav-menu{
     
-        visibility: hidden;
+        /* visibility: hidden; */
+        display: none;
         
         max-height: 0;
    }
 
     .header__container{
         flex-wrap: wrap;
-   }
+    }
 
    .nav-menu_active .nav-menu__list{
         max-height: 60vh;
