@@ -4,8 +4,7 @@
 
 /* START Общие свойства */
 html{
-    /* font-size: 14px; */
-    font-size:calc(14px + 14 * (100vw - 540px) / 1320);
+    font-size: 20px;
 }
 
 
@@ -210,12 +209,11 @@ main{
 }
 
 /* START ONE SECTION */
-.section{
-    padding-top: 25px;
-}
 
-.main-section-one{
+
+.home-section{
     width: 100%;
+    padding-top: 25px;
     background-image: url("../images/tomas_dark.jpg");
     background-repeat: no-repeat;
     background-position:right center;
@@ -225,7 +223,7 @@ main{
     padding-top: 90px;
 }
 
-.main-section-one__container{
+.home-section__container{
    
     position: relative;
     top:45%;
@@ -290,10 +288,6 @@ main{
     animation-direction: alternate;
     animation-duration: 1.2s;
     animation-timing-function: ease-in;
-
-    /* test */
-    transition: all 0.9s ease;
-
 
 
     border-right: 2px solid #eb2f06;
@@ -368,8 +362,224 @@ main{
 
 
 
-
 /* END ONE SECTION */
+
+
+/* START ABOUT SECTION */
+
+.about-section{
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    background-color: #1b1c1f;
+}
+
+.about-section__container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    color:#ccc;
+}
+
+.about-section__img{
+    
+    z-index: 1;
+    position: relative;
+    background-color: #444;
+    max-width: 400px;
+    height: fit-content;
+    margin-right: 50px;
+    flex-basis: 50%;
+    height: 540px;
+    
+
+    box-sizing: content-box;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+
+.about-section__img::after{
+    z-index: -1;    
+    position: absolute;
+    top: 70%;
+    left: 58%;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: #F79F1F;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+
+.about-section__img::before{
+
+    position: absolute;
+    top: -5%;
+    left: -8%;
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: #F79F1F;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+
+.about-section__img-tomas{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.about-section__img-tomas-animation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    /* width: 400px; */
+}
+
+.img-tomas-animation__span{
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: -75%;
+    top: 45%;
+    display: block;
+    width: 250%;
+    height: 100px;
+    background-color: #F79F1F;
+    animation: border_img 13s linear infinite;      
+}
+
+@keyframes border_img {
+
+    
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.about-section__text-content{
+    flex-basis: 50%;
+    color:#fff;
+}
+
+.text-content__header{
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.content__header{
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.text-content__header-h2{
+    color:#333;
+    position: relative;
+    top:0;
+    left: 0;
+    font-size: 4.5rem;
+    line-height: 3.5rem;
+    font-weight: 700;
+}
+
+.text-content__header-span{
+    color:#eb2f06;
+    font-size: 1.5rem;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.text-content__description{
+    font-size: 0.8rem;
+    color:#ccc;
+}
+
+.text-content__info-list{
+    font-size: 0.9rem;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.text-content__info-list-item{
+    padding-top: 15px;
+    display: flex;
+    flex-basis: 45%;
+}
+
+.text-content__info-list-item-span{
+    
+    min-width: 80px;
+    color:#eb2f06;
+}
+
+
+.text-content__button-cv-link{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 10px 25px;
+    border: 2px solid #eb2f06;
+    color:#eb2f06;
+    border-radius: 30px;
+    font-size: 0.8rem;
+}
+
+.text-content__button-cv-link::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    border-radius: 30px;
+
+}
+
+.text-content__button-cv-link:hover{
+    color: #fff;
+}
+
+.text-content__button-cv-link:hover::before{
+    /* content: '';
+    position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    z-index: -1;
+    transition: 0.3s ease-in;
+    background-color: #eb2f06;
+}
+
+
+/* END ABOUT SECTION */
 
 
 /* END MAIN */
@@ -404,6 +614,8 @@ main{
         width: 720px;
     }
 
+
+    
     
 
 }
@@ -433,7 +645,7 @@ main{
         font-size: 2.5rem !important;
     }
 
-    .main-section-one{
+    .home-section{
         max-height: 100%;
     }
 
@@ -447,7 +659,7 @@ main{
         height: 30px;
     }
 
-    .main-section-one__container{
+    .home-section__container{
         top:50%;
     }
 
@@ -522,6 +734,37 @@ main{
 }
 
 @media (max-width: 992px){
+
+    /* START SECTION ABOUT */
+
+    .about-section__container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section__img{
+        margin-bottom: 90px;
+    }
+
+    .text-content__header{
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .text-content__info-list{
+        flex-direction: column;
+    }
+
+    .text-content__header-h2{
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    }
+
+    .text-content__header-span{
+        font-size: 1.3rem;
+    }
+    /* END SECTION ABOUT */
+
     /* Прячем меню - показываем бургер */
 
     .menu__button-burger{
@@ -530,7 +773,7 @@ main{
 
     /* START логика для js */
 
-    /* бургер */
+    /* START бургер */
 
    .menu__button-burger_active > .button-burger__span-top{
         top: 45%;
@@ -547,9 +790,9 @@ main{
         transform: rotate(230deg) translate(0, 40%);
    }
 
-
+   /* END BURGER */
    
-    /* меню */
+    /* MENU */
 
     .nav-menu{
     
@@ -587,6 +830,8 @@ main{
         display: block;
         transition: all 0.4s ease-out;
     }
+
+    /* END MENU */
    
 
    /* END логика для js */

@@ -34,12 +34,16 @@
            <nav class="nav-menu menu">
                <ul class="nav-menu__list list" aria-label="Главная">
                    <li class="list__item">
-                       <a href="#">About</a>
+                       <a href="#">Home</a>
                    </li class="list__item">
 
                    <li class="list__item">
-                       <a href="#">Services</a>
+                       <a href="#">About</a>
                    </li>
+
+                    <li class="list__item">
+                        <a href="#">Services</a>
+                    </li>
 
                    <li class="list__item">
                        <a href="#">Resume</a>
@@ -72,9 +76,9 @@
    
     <main class="main">
 
-        <!-- START Section one -->
-        <section class="main-section-one section">
-            <div class="main-section-one__container container">
+        <!-- START Section Home -->
+        <section class="home-section">
+            <div class="home-section__container container">
                 <div class="container__content-section-one content-section">
                     <p class="content-section__into content-section">Hello</p>
                     <p class="content-section__name content-section">
@@ -115,7 +119,74 @@
                 </div>
             </div>
         </section>
-        <!-- END Section one -->
+        <!-- END Section Home-->
+
+        <!-- START Section About -->
+        <section class="about-section">
+            <div class="about-section__container container">
+
+                <div class="about-section__img">
+                    <img class="about-section__img-tomas" src="/assets/images/tomas_photo.jpg" alt="TOMAS PHOTO">
+                    <div class="about-section__img-tomas-animation">
+                        <span class="img-tomas-animation__span"></span>
+                    </div>
+                </div>
+
+                <div class="about-section__text-content text-content"> 
+                    <div class="text-content__header content__header">
+                        <h2 class="text-content__header-h2">ABOUT ME</h2>
+                        <span class="text-content__header-span">i`m Tomas</span>
+                    </div>
+                    <p class="text-content__description">
+                        I am a programmer and designer of websites and mobile applications 
+                        with more than five years of experience, as I possess the skill, creativity 
+                        and innovation in my field of work, and this is what makes me distinguished 
+                        from others and people love to deal with me
+                    </p>
+                    <div class="text-content__info">
+                        <ul class="text-content__info-list">
+                            <li class="text-content__info-list-item">
+                                <span class="text-content__info-list-item-span">Name:</span>
+                                Tomas Carter
+                            </li>
+                            <li class="text-content__info-list-item">
+                                <span class="text-content__info-list-item-span">Age:</span>
+                                35 years old
+                            </li>
+                            <li class="text-content__info-list-item">
+                                <span class="text-content__info-list-item-span">Email:</span>
+                                Tomas@example.com
+                            </li>
+                            <li class="text-content__info-list-item">
+                                <span class="text-content__info-list-item-span">Address:</span>
+                                1902 Jones Avenue
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="text-content__button-cv">
+                        <a class="text-content__button-cv-link" href="#">
+                            <i class="fa-solid fa-download"></i> 
+                            Download CV
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+        <!-- END Section About -->
+        <section class="services-section">
+            <div class="services-section__container container">
+                <div class="service-section__text-content text-content"> 
+                    <div class="text-content__header">
+                        <h2 class="text-content__header-h2">SERVICES</h2>
+                        <span class="text-content__header-span">What I Offer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- START Section -->
 
     </main>
 
