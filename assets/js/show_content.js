@@ -1,6 +1,13 @@
-(function(){
 
-    let left_element = document.querySelector('.about-section__img');
+
+export default class Show_content{
+    constructor(){
+        about_section();
+    }
+
+    about_section(){
+
+        let left_element = document.querySelector('.about-section__img');
         let right_element = document.querySelector('.about-section__text-content');
         let count = 2;
 
@@ -35,4 +42,34 @@
                 observer.observe(elm);
             }
 
-})();
+    } 
+
+
+}
+
+const changeNav = (entries, observer) => {
+    entries.forEach((entry) => {
+      // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
+      if(entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+        // удаляем активный класс у элемента меню
+        document.querySelector('.active').classList.remove('active');
+        // получаем ID секции, которая текущая
+        let id = entry.target.getAttribute('id');
+        // обращаемся к ссылке меню, у которой href равен ID секции
+        let newLink = document.querySelector(`[href="#${id}"]`).classList.add('active');
+      }
+    });
+  }
+  
+  // обратите внимание на значение опции threshold
+  const options = {
+    threshold: 0.55
+  }
+  
+  const observer = new IntersectionObserver(changeNav, options);
+  
+  // передаём все секции в обсервер
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
