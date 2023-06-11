@@ -4,7 +4,6 @@ export default class Slider{
     constructor(Element){
 
         let El = document.querySelector(Element);
-        console.log(El);
 
 
         // this.Slider(El);

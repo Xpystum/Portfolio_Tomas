@@ -7,13 +7,7 @@ export default class Burger {
         let ElMenu = document.querySelector(menuClass);
         this.setEventClick(ElBurger,ElMenu  );
 
-
-
-        // console.log(ElDiv);
-
-
     }
-
 
 
     setEventClick(ElBurger, ElMenu = null){
@@ -22,13 +16,5 @@ export default class Burger {
             ElMenu != null ? ElMenu.classList.toggle("nav-menu_active"): "" ;
         });
     }
-
-
-    setCss(ElDiv,creatEl){
-
-    }
-
-
-
 
 }
