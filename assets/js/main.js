@@ -3,7 +3,7 @@
 import Slider from './slider.js';
 import Burger from './Burger.js';
 import ShirinkMenu from './ShirinkMenu.js';
-import ShirinkMenu from './Show_content.js'; 
+import Show_content from './Show_content.js'; 
 
 
 
