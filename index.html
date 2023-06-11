@@ -77,7 +77,7 @@
     <main class="main">
 
         <!-- START Section Home -->
-        <section id="home" class="home-section">
+        <section id="home" data-anchor="home" class="home-section">
             <div class="home-section__container container">
                 <div class="container__content-section-one content-section">
                     <p class="content-section__into content-section">Hello</p>
@@ -122,7 +122,7 @@
         <!-- END Section Home-->
 
         <!-- START Section About -->
-        <section id="about" class="about-section">
+        <section id="about" data-anchor="about" class="about-section">
             <div class="about-section__container container">
 
                 <div class="about-section__img">
@@ -178,7 +178,7 @@
         <!-- END Section About -->
 
         <!-- START Section Services -->
-        <section id="services" class="services-section">
+        <section id="services" data-anchor="services" class="services-section">
             <div class="services-section__container container">
                 <div class="service-section__text-content text-content"> 
                     <div class="service-section__text-content__header text-content__header">
@@ -268,6 +268,37 @@
     </main>
 
     <script type="module" src="assets/js/Main.js"></script>
+    <script>
+
+        const changeNav = (entries, observer) => {
+            entries.forEach((entry) => {
+                const { target, isIntersecting } = entry; //Деструктурирующее присваивание
+              // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
+              if(isIntersecting && entry.intersectionRatio >= 0.55) {
+                // удаляем активный класс у элемента меню
+                document.querySelector('.list__link-active').classList.remove('list__link-active');
+                // получаем ID секции, которая текущая
+                let dateAtribut = target.dataset.anchor;
+                // обращаемся к ссылке меню, у которой href равен ID секции
+                let newLink = document.querySelector(`[href="#${dateAtribut}"]`).classList.add('list__link-active');
+              }
+            });
+          }
+          
+          // обратите внимание на значение опции threshold
+          const options = {
+            threshold: 0.55 //можно поиграться
+          }
+          
+          const observer = new IntersectionObserver(changeNav, options);
+          
+          // передаём все секции в обсервер 
+          const sections = document.querySelectorAll('section');
+          sections.forEach((section) => {
+            observer.observe(section);
+          });
+
+    </script>
 </body>
 
 </html>
