@@ -2,7 +2,7 @@
 
 export default class Show_content{
     constructor(){
-        about_section();
+      this.about_section();
     }
 
     about_section(){
@@ -43,6 +43,10 @@ export default class Show_content{
             }
 
     } 
+
+    service_section(){
+
+    }
 
 
 }
