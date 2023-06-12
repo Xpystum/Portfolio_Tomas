@@ -1,7 +1,8 @@
 
 export default class Show_content{
     constructor(){
-        about_section();
+      this.about_section();
+      this.service_section();
     }
 
     about_section(){
