@@ -3,6 +3,7 @@
 export default class Show_content{
     constructor(){
       this.about_section();
+      this.service_section();
     }
 
     about_section(){
@@ -46,34 +47,47 @@ export default class Show_content{
 
     service_section(){
 
+      function onEntry(entry) {
+        entry.forEach(change => {
+         const { target, isIntersecting } = change; //Деструктурирующее присваивание
+          if (isIntersecting) {
+
+            target.classList.add('text-content__main-container-opacity');
+            target.classList.add("text-content__main-container-margin");
+          }
+        });
+      }
+
+      this.h2_animation_content();
+      let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
+      let observer = new IntersectionObserver(onEntry, options);
+      let elements = document.querySelectorAll('.text-content__main-container');
+      console.log(elements);
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
+
     }
 
+    h2_animation_content(){
+
+      function onEntry(entry) {
+        entry.forEach(change => {
+        const { target, isIntersecting } = change;
+          if (isIntersecting) {
+            target.classList.add('header-h2_active');
+          }
+        });
+      }
+
+    
+      let options = { threshold: [0.1] }; //на каком % срабатывает при попадании sectiond в область viewport
+      let observer = new IntersectionObserver(onEntry, options);
+      let elements = document.querySelectorAll('.header-h2_letter_spacing');
+      console.log(elements);
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
+    }
 
 }
-
-const changeNav = (entries, observer) => {
-    entries.forEach((entry) => {
-      // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
-      if(entry.isIntersecting && entry.intersectionRatio >= 0.55) {
-        // удаляем активный класс у элемента меню
-        document.querySelector('.active').classList.remove('active');
-        // получаем ID секции, которая текущая
-        let id = entry.target.getAttribute('id');
-        // обращаемся к ссылке меню, у которой href равен ID секции
-        let newLink = document.querySelector(`[href="#${id}"]`).classList.add('active');
-      }
-    });
-  }
-  
-  // обратите внимание на значение опции threshold
-  const options = {
-    threshold: 0.55
-  }
-  
-  const observer = new IntersectionObserver(changeNav, options);
-  
-  // передаём все секции в обсервер
-  const sections = document.querySelectorAll('section');
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
