@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/displayflex.css">
 
+
     <script src="https://kit.fontawesome.com/f0787f49d4.js" crossorigin="anonymous"></script>
+    <script type="module" src="assets/js/Main.js"></script>
 </head>
 <body>
     <!-- START HEADER -->
@@ -266,39 +268,6 @@
         <!-- START Section Services -->
 
     </main>
-
-    <script type="module" src="assets/js/Main.js"></script>
-    <script>
-
-        const changeNav = (entries, observer) => {
-            entries.forEach((entry) => {
-                const { target, isIntersecting } = entry; //Деструктурирующее присваивание
-              // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
-              if(isIntersecting && entry.intersectionRatio >= 0.55) {
-                // удаляем активный класс у элемента меню
-                document.querySelector('.list__link-active').classList.remove('list__link-active');
-                // получаем ID секции, которая текущая
-                let dateAtribut = target.dataset.anchor;
-                // обращаемся к ссылке меню, у которой href равен ID секции
-                let newLink = document.querySelector(`[href="#${dateAtribut}"]`).classList.add('list__link-active');
-              }
-            });
-          }
-          
-          // обратите внимание на значение опции threshold
-          const options = {
-            threshold: 0.55 //можно поиграться
-          }
-          
-          const observer = new IntersectionObserver(changeNav, options);
-          
-          // передаём все секции в обсервер 
-          const sections = document.querySelectorAll('section');
-          sections.forEach((section) => {
-            observer.observe(section);
-          });
-
-    </script>
 </body>
 
 </html>
