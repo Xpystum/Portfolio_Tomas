@@ -1,5 +1,5 @@
 
-export default class Show_content{
+class Show_content{
     constructor(){
       this.about_section();
       this.service_section();

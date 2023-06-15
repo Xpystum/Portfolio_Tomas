@@ -1,6 +1,6 @@
 "use strict";
 
-export default class ShirinkMenu{
+class ShirinkMenu{
 
     constructor(){
 

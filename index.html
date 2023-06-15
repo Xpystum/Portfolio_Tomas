@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="assets/styles/displayflex.css">
 
 
+    <script type="text/javascript" src="anchor.js"></script>
+    <script type="text/javascript" src="Burger.js"></script>
+    <script type="text/javascript" src="ShirinkMenu.js"></script>
+    <script type="text/javascript" src="Show_content.js"></script>
+    <script type="text/javascript" src="Slider.js"></script>
+
+
     <script src="https://kit.fontawesome.com/f0787f49d4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -267,16 +274,19 @@
         <!-- START Section Services -->
 
 
-    <script type="module" src="/anchor.js"></script>
-    <script type="module" src="/Burger.js"></script>
-    <script type="module" src="/ShirinkMenu.js"></script>
-    <script type="module" src="/Show_content.js"></script>
-    <script type="module" src="/Slider.js"></script>
+   
+    </main>
+
+   
 
     <script>
-        
-    </script>
-    </main>
+
+        let a = new Burger(".menu__button-burger",".nav-menu");
+        new Slider(".content-section_clips");
+        new ShirinkMenu();  
+        new Show_content();
+ 
+     </script>
 </body>
 
 </html>
