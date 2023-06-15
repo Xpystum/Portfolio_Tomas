@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/styles/displayflex.css">
 
 
-    <script type="text/javascript" src="anchor.js"></script>
     <script type="text/javascript" src="Burger.js"></script>
     <script type="text/javascript" src="ShirinkMenu.js"></script>
     <script type="text/javascript" src="Show_content.js"></script>
@@ -278,14 +277,12 @@
     </main>
 
    
-
+    <script type="text/javascript" src="anchor.js"></script>
     <script>
-
-        let a = new Burger(".menu__button-burger",".nav-menu");
+        new Burger(".menu__button-burger",".nav-menu");
         new Slider(".content-section_clips");
         new ShirinkMenu();  
         new Show_content();
- 
      </script>
 </body>
 
