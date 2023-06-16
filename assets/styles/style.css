@@ -49,6 +49,8 @@ section{
 
 .list__link-active{
     color: #eb2f06 !important;
+    transition: 0.8s ease-in;   
+   
 }
 
 .list__link-active::before{
@@ -60,7 +62,7 @@ section{
     border: solid transparent;
     border-top-color: #eb2f06;
     border-width:5px;
-    transition: 0.3s ease-in;
+    transition: 0.8s ease-in;
 }
 
 .header-h2_letter_spacing{
@@ -70,6 +72,7 @@ section{
 .header-h2_active{
     
     letter-spacing: 0 !important;
+    display: block !important;
 }
 
 
@@ -82,6 +85,18 @@ section{
 .text-content__main-container-margin{
     margin: 50px 0 12px 0 !important;
 
+}
+
+.resume-section-content-header_opacity_scale{
+    opacity: 1 !important;
+    transform: scale(1) !important;
+
+}
+
+
+.content_box_resume_left-removed_opacity{
+    left: 0 !important;
+    opacity: 1 !important;
 }
 
 /* END Логика JS */
@@ -255,6 +270,7 @@ header{
     color: #fff;
     padding: 8px 8px;
     letter-spacing: 1px;
+    transition: all 0.8s ease;
 }
 
 /* END HEADER */
@@ -451,7 +467,7 @@ main{
     flex-basis: 50%;
     height: 540px;
     transition: all 1s ease;
-    transform: translateX(-25%);
+    transform: translateX(-8%);
 
     box-sizing: content-box;
 
@@ -533,7 +549,7 @@ main{
 
 
 .about-section__text-content{
-    transform: translateX(25%);
+    transform: translateX(8%);
     flex-basis: 50%;
     color:#fff;
     transition: all 1s ease;
@@ -544,6 +560,7 @@ main{
     overflow: hidden;
     width: fit-content;
     margin-bottom: 30px;
+    margin: 0px auto 10px auto;
 }
 
 .content__header{
@@ -735,6 +752,142 @@ main{
 /* END SECTION SERVICE */
 
 
+/* START SECTION RESUME */
+
+.resume-section{
+    margin: 0 auto;
+    background-color: #1b1c1f;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.resume-section_container{
+    margin: 0 auto;
+}
+
+.resume-section__container-block{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.content_box_resume{
+    
+    position: relative;
+    top:0;
+    left:-45px;
+    opacity: 0;
+    background-color: #0f1013;
+    padding: 15px 15px 10px 30px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    transition: all 0.8s ease;
+}
+
+.resume-section__container-block{
+    margin-top: 40px;
+}
+
+.resume-section__content-education-header,
+.resume-section__content-experiences-header{
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-left: -70px;
+}
+
+.resume-section__content-experiences-header > i,
+.resume-section__content-education-header > i{
+    line-height: 50px;
+    margin-right: 15px;
+    font-size: 40px;
+    color: #eb2f06;
+}
+
+.resume-section__content-h3{
+    font-size: 1.5rem;
+}
+
+.resume-section__box-experiences,
+.resume-section__box-education{
+    
+    padding: 0 12px;
+    z-index: 0;
+    position: relative;
+
+}
+
+.resume-section-content-box{
+    padding-left: 70px;
+}
+
+.resume-section-content-box::before{
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 36px;
+    background-color: #555;
+    width: 2px;
+    height: calc(100% - 75px);
+}
+
+.content_box_resume::before{
+    
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #0f1013;
+}
+
+.content_box_resume__circle{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -56px;
+    transform: translate(0,-50%);
+    width: 22px;
+    height: 22px;
+    background-color: #eb2f06;
+    border-radius: 50%;
+}
+
+.content_box_resume:hover .content_box_resume__circle{
+    box-sizing: border-box;
+    background-color: #F79F1F;
+    border: 2px solid #eb2f06;
+}
+
+.content_box_resume__title{
+    color:#F79F1F;
+    font-size: 1.2rem;
+}
+
+.content_box_resume__date{
+    display: inline-block;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: linear-gradient(to left,#F79F1F,#eb2f06);
+}
+
+.content_box_resume__text{
+    font-size: 0.8rem;
+}
+
+
+/* END SECTION RESUME */
+
+
 /* END MAIN */
 
 
@@ -907,6 +1060,10 @@ main{
         padding: 0 20px;
     }
 
+    .about-section__img{
+        transform: translateX(-2.5%);
+    }
+
 
 }
 
@@ -933,8 +1090,9 @@ main{
     }
 
     .text-content__header-h2{
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        display: none;
     }
 
     .text-content__header-span{
@@ -1014,7 +1172,18 @@ main{
    /* END логика для js */
 
 
+   /* START SECTION RESUME */
+
+    .resume-section__container-block{
+        flex-wrap: wrap;
+
+    }
+
  
+
+
+
+   /* END SECTION RESUME   */
   
 }
 
