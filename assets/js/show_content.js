@@ -4,7 +4,7 @@ export default class Show_content{
       this.h2_animation_content();
       this.about_section();
       this.service_section();
-      this. resume_section();
+      this.resume_section();
     }
 
     about_section(){
