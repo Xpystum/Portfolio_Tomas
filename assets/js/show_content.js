@@ -1,8 +1,10 @@
 
 export default class Show_content{
     constructor(){
+      this.h2_animation_content();
       this.about_section();
       this.service_section();
+      this. resume_section();
     }
 
     about_section(){
@@ -61,12 +63,61 @@ export default class Show_content{
       let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
       let observer = new IntersectionObserver(onEntry, options);
       let elements = document.querySelectorAll('.text-content__main-container');
-      console.log(elements);
       for (let elm of elements) {
           observer.observe(elm);
       }
 
     }
+
+    resume_section(){
+
+
+      (function () {
+
+        function onEntry(entry) {
+          entry.forEach(change => {
+           const { target, isIntersecting } = change; //Деструктурирующее присваивание
+            if (isIntersecting) {
+             
+              target.classList.add("content_box_resume_left-removed_opacity");
+            }
+          });
+        }
+      
+        let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = document.querySelectorAll('.content_box_resume');
+        for (let elm of elements) {
+            observer.observe(elm);
+        }
+
+      }());
+
+      (function () {
+
+        function onEntry(entry) {
+          entry.forEach(change => {
+           const { target, isIntersecting } = change; //Деструктурирующее присваивание
+            if (isIntersecting) {
+
+              target.classList.add("resume-section-content-header_opacity_scale");
+            }
+          });
+        }
+      
+        let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = document.querySelectorAll('.resume-section-content-header');
+        for (let elm of elements) {
+            observer.observe(elm);
+        }
+
+      }());
+          
+
+    }
+    
+    
   
     h2_animation_content(){
 
@@ -83,7 +134,6 @@ export default class Show_content{
         let options = { threshold: [0.1] }; //на каком % срабатывает при попадании sectiond в область viewport
         let observer = new IntersectionObserver(onEntry, options);
         let elements = document.querySelectorAll('.header-h2_letter_spacing');
-        console.log(elements);
         for (let elm of elements) {
             observer.observe(elm);
         }
