@@ -63,7 +63,6 @@ export default class Show_content{
       let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
       let observer = new IntersectionObserver(onEntry, options);
       let elements = document.querySelectorAll('.text-content__main-container');
-      console.log(elements);
       for (let elm of elements) {
           observer.observe(elm);
       }
@@ -88,7 +87,6 @@ export default class Show_content{
         let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
         let observer = new IntersectionObserver(onEntry, options);
         let elements = document.querySelectorAll('.content_box_resume');
-        console.log(elements);
         for (let elm of elements) {
             observer.observe(elm);
         }
@@ -110,7 +108,6 @@ export default class Show_content{
         let options = { threshold: [0.3] }; //на каком % срабатывает при попадании sectiond в область viewport
         let observer = new IntersectionObserver(onEntry, options);
         let elements = document.querySelectorAll('.resume-section-content-header');
-        console.log(elements);
         for (let elm of elements) {
             observer.observe(elm);
         }
@@ -137,7 +134,6 @@ export default class Show_content{
         let options = { threshold: [0.1] }; //на каком % срабатывает при попадании sectiond в область viewport
         let observer = new IntersectionObserver(onEntry, options);
         let elements = document.querySelectorAll('.header-h2_letter_spacing');
-        console.log(elements);
         for (let elm of elements) {
             observer.observe(elm);
         }
