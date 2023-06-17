@@ -57,6 +57,8 @@ mediaQuery.onchange = (e) => {
     flagOptions = options.threshold;
     
     observer = new IntersectionObserver(changeNav, options);
+    observer.options
+    
     // передаём все секции в обсервер
     sections.forEach((section) => {
       observer.observe(section);
