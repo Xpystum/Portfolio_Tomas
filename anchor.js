@@ -1,62 +1,82 @@
+"use strict";
 
-(function(){
-  const changeNav = (entries, observer) => {
-    entries.forEach((entry) => {
-      // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
-      if(entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+
+let observer = null;
+let flagOptions = null;
+const mediaQuery = window.matchMedia('(max-width: 993px)')
+let options = {
+  threshold: 0.15
+}
+
+const changeNav = (entries, observer) => {
+   
+  entries.forEach((entry) => {
+    // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
+      if(entry.isIntersecting && entry.intersectionRatio >= flagOptions - 0.05) {
         // удаляем активный класс у элемента меню
-        let a = document.querySelector('.list__link-active');
-        a.classList.remove('list__link-active');
+        document.querySelector('.list__link-active').classList.remove('list__link-active');
         // получаем ID секции, которая текущая
         let id = entry.target.getAttribute('id');
         // обращаемся к ссылке меню, у которой href равен ID секции
         let newLink = document.querySelector(`[href="#${id}"]`).classList.add('list__link-active');
+
+
+        let BurgerMenu = document.querySelector(".menu__button-burger");
+        BurgerMenu.classList.remove("menu__button-burger_active");
+
+        let NavMenu =  document.querySelector(".nav-menu");
+        NavMenu.classList.remove("nav-menu_active");
       }
+  });
+}
+
+
+const sections =  document.querySelectorAll('section');
+observer = new IntersectionObserver(changeNav, options);
+// передаём все секции в обсервер
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+
+
+ 
+
+
+
+mediaQuery.onchange = (e) => {
+  console.log(observer);
+
+  if(observer != null){
+    observer.disconnect();
+
+  }
+
+  if(e.matches) {
+    options.threshold = 0.10;
+    flagOptions = options.threshold;
+    
+    observer = new IntersectionObserver(changeNav, options);
+    observer.options
+    
+    // передаём все секции в обсервер
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+  } else {
+   
+    options.threshold = 0.40;
+    flagOptions = options.threshold;
+    
+    observer = new IntersectionObserver(changeNav, options);
+    sections.forEach((section) => {
+      observer.observe(section);
     });
   }
-  
-  const options = {
-    threshold: 0.55
-  }
-  
-  const observer = new IntersectionObserver(changeNav, options);
-  
-  // передаём все секции в обсервер
-  const sections = document.querySelectorAll('section');
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-}());
+
+};
 
 
-// <script>
 
-// <!-- const changeNav = (entries, observer) => {
-// entries.forEach((entry) => {
-//     const { target, isIntersecting } = entry; //Деструктурирующее присваивание
-//   // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
-//   if(isIntersecting && entry.intersectionRatio >= 0.55) {
-//     // удаляем активный класс у элемента меню
-//     document.querySelector('.list__link-active').classList.remove('list__link-active');
-//     // получаем ID секции, которая текущая
-//     let dateAtribut = target.dataset.anchor;
-//     // обращаемся к ссылке меню, у которой href равен ID секции
-//     let newLink = document.querySelector(`[href="#${dateAtribut}"]`).classList.add('list__link-active');
-//   }
-// });
-// }
-
-// const options = {
-// threshold: 0.55 //можно поиграться
-// }
-
-// const observer = new IntersectionObserver(changeNav, options);
-
-// // передаём все секции в обсервер 
-// const sections = document.querySelectorAll('section');
-// sections.forEach((section) => {
-// observer.observe(section);
-// });  -->
-
-// </script>
 

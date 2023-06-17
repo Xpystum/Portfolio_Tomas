@@ -1,6 +1,6 @@
 "use strict";
 
-class Burger {
+export default class Burger {
 
     constructor(elementClass, menuClass = null){
         let ElBurger = document.querySelector(elementClass);
