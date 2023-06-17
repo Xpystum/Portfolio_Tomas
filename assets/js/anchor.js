@@ -13,12 +13,18 @@ const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
       if(entry.isIntersecting && entry.intersectionRatio >= flagOptions - 0.05) {
         // удаляем активный класс у элемента меню
-        document.querySelector('.list__link-active').classList.remove('list__link-active');
+        let likActive = document.querySelector('.list__link-active');
+        if(likActive){
+          likActive.classList.remove('list__link-active');
+        }
         // получаем ID секции, которая текущая
         let id = entry.target.getAttribute('id');
         // обращаемся к ссылке меню, у которой href равен ID секции
-        let newLink = document.querySelector(`[href="#${id}"]`).classList.add('list__link-active');
+        let newLink = document.querySelector(`[href="#${id}"]`);
 
+        if(newLink){
+          newLink.classList.add('list__link-active');
+        }
 
         let BurgerMenu = document.querySelector(".menu__button-burger");
         BurgerMenu.classList.remove("menu__button-burger_active");
