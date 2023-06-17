@@ -1,6 +1,6 @@
 "use strict";
 
-export default class Slider{
+class Slider{
     constructor(Element){
 
         let El = document.querySelector(Element);

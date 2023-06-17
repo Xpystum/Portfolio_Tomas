@@ -1,5 +1,5 @@
 
-export default class Show_content{
+class Show_content{
     constructor(){
       this.h2_animation_content();
       this.about_section();
