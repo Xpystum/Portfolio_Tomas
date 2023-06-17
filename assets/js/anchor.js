@@ -11,7 +11,6 @@ let options = {
 const changeNav = (entries, observer) => {
    
   entries.forEach((entry) => {
-    // чекаем, то элемент пересекает наблюдаемую область более, чем на 55%
       if(entry.isIntersecting && entry.intersectionRatio >= flagOptions - 0.05) {
         // удаляем активный класс у элемента меню
         document.querySelector('.list__link-active').classList.remove('list__link-active');
@@ -38,39 +37,16 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-
-
- 
-
-
-
 mediaQuery.onchange = (e) => {
-  console.log(observer);
-
-  if(observer != null){
-    observer.disconnect();
-
-  }
 
   if(e.matches) {
-    options.threshold = 0.10;
-    flagOptions = options.threshold;
-    
-    observer = new IntersectionObserver(changeNav, options);
-    // передаём все секции в обсервер
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
+    observer.threshold = 0.10;
+    console.log(observer.threshold);
+    flagOptions = observer.threshold;
   } else {
-   
-    options.threshold = 0.40;
-    flagOptions = options.threshold;
-    
-    observer = new IntersectionObserver(changeNav, options);
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+    observer.threshold = 0.40;
+    console.log(observer.threshold);
+    flagOptions = observer.threshold;
   }
 
 };
