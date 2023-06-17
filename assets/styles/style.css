@@ -49,7 +49,7 @@ section{
 
 .list__link-active{
     color: #eb2f06 !important;
-    transition: 0.8s ease-in;   
+    transition: 0.2s ease-in;   
    
 }
 
@@ -63,6 +63,28 @@ section{
     border-top-color: #eb2f06;
     border-width:5px;
     transition: 0.8s ease-in;
+}
+
+.list__link:hover::before,
+.list__link:active::before,
+.list__link:focus::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid transparent;
+    border-top-color: #eb2f06;
+    border-width:5px;
+    transition: 0.8s ease-in;
+}
+
+.list__link:hover,
+.list__link:active,
+.list__link:focus
+{
+    color: #eb2f06 !important;
+    transition: 0.3s ease-in;  
 }
 
 .header-h2_letter_spacing{
