@@ -5,6 +5,8 @@ class Show_content{
       this.about_section();
       this.service_section();
       this.resume_section();
+      this.skills_section()
+
     }
 
     about_section(){
@@ -71,7 +73,6 @@ class Show_content{
 
     resume_section(){
 
-
       (function () {
 
         function onEntry(entry) {
@@ -114,6 +115,39 @@ class Show_content{
 
       }());
           
+
+    }
+
+    skills_section(){
+      
+      let elements = [...document.querySelectorAll('.skills_section__skill-loader-progress')];
+      let progressInteger = [...document.querySelectorAll('.skills_section__skill-loader-progress-integer')];
+
+      function onEntry(entry) {
+        entry.forEach(change => {
+         const { target, isIntersecting } = change; //Деструктурирующее присваивание
+          if (isIntersecting) {
+
+              let dataProgress = target.getAttribute("data-progress");
+              // присваиваем атрибут data-progress ширине прогресса
+              target.style.width = dataProgress;
+              // console.log(target.nextSibling);
+
+              if(target.nextSibling != undefined || target.nextSibling != null){
+                // выбираем элемент (цифра + %)
+                target.nextSibling.nextSibling.style.left = dataProgress; 
+              }
+           
+           
+          }
+        });
+      }
+    
+      let options = { threshold: [0.2] }; //на каком % срабатывает при попадании sectiond в область viewport
+      let observer = new IntersectionObserver(onEntry, options);
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
 
     }
     
