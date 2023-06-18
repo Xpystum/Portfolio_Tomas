@@ -47,11 +47,9 @@ mediaQuery.onchange = (e) => {
 
   if(e.matches) {
     observer.threshold = 0.10;
-    console.log(observer.threshold);
     flagOptions = observer.threshold;
   } else {
     observer.threshold = 0.40;
-    console.log(observer.threshold);
     flagOptions = observer.threshold;
   }
 
