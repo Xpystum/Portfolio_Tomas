@@ -16,6 +16,8 @@
     <script type="text/javascript" src="ShirinkMenu.js"></script>
     <script type="text/javascript" src="Show_content.js"></script>
     <script type="text/javascript" src="Slider.js"></script>
+    <script type="text/javascript" src="PortfolioLogic.js"></script>
+    <script type="text/javascript" src="fslightbox"></script>
 
 
     <script src="https://kit.fontawesome.com/f0787f49d4.js" crossorigin="anonymous"></script>
@@ -375,7 +377,7 @@
 
         <!-- START Section Skills -->
         <section class="skills_section" id="skills">
-            <div class="skills_section_container container">
+            <div class="skills_section__container container">
                 
                 <div class="skills_section__text-content__header text-content__header">
                     <h2 class="text-content__header-h2 header-h2_letter_spacing">Skills</h2>
@@ -492,8 +494,113 @@
         </section>
         <!-- END Section Skills -->
 
-        <script type="module" src="assets/js/main.js"></script>
+        <!-- START Section Portfolio -->
+        <section id="portfolio" class="portfolio_section">
+            <div class="portfolio_section__container container">
+                
+                <div class="portfolio_section__text-content__header text-content__header">
+                    <h2 class="text-content__header-h2 header-h2_letter_spacing">PORFOLIO</h2>
+                    <span class="text-content__header-span">Our Project</span>
+                </div>
 
+
+                <div class="portfolio_section__wrapp-menu">
+                    <ul class="portfolio_section__menu">
+                        <li data-menulist="all" class="portfolio_section__list portfolio_section__list-active">
+                            All
+                        </li>
+                        <li data-menulist="design" class="portfolio_section__list">
+                            Design
+                        </li>
+                        <li data-menulist="development" class="portfolio_section__list">
+                            Development
+                        </li>
+                        <li data-menulist="marketing" class="portfolio_section__list">
+                            Marketing
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="portfolio_section__rewiev-wrapp">
+                    <div data-menulist="design" class="portfolio_section__rewiev-block-info portfolio_section__rewiev-scale">
+                        <a data-fslightbox="gallery" href="/assets/images/portfolio1.jpg" class="portfolio_section__rewiev-link">
+                            <img src="/assets/images/portfolio1.jpg" class="portfolio_section__rewiev-img">
+                            <div class="portfolio_section__rewiev-info-hover">
+                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <h4 class="portfolio_section__rewiev-info-hover-title">Project Title</h4>
+                                <p class="portfolio_section__rewiev-info-hover-text">Design</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div data-menulist="design" class="portfolio_section__rewiev-block-info">
+                        <a data-fslightbox="gallery" href="/assets/images/portfolio2.jpg" class="portfolio_section__rewiev-link">
+                            <img src="/assets/images/portfolio2.jpg" class="portfolio_section__rewiev-img">
+                            <div class="portfolio_section__rewiev-info-hover">
+                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <h4 class="portfolio_section__rewiev-info-hover-title">Project Title</h4>
+                                <p class="portfolio_section__rewiev-info-hover-text">Development</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div data-menulist="development" class="portfolio_section__rewiev-block-info">
+                        <a data-fslightbox="gallery" href="/assets/images/portfolio3.jpg" class="portfolio_section__rewiev-link">
+                            <img src="/assets/images/portfolio3.jpg" class="portfolio_section__rewiev-img">
+                            <div class="portfolio_section__rewiev-info-hover">
+                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <h4 class="portfolio_section__rewiev-info-hover-title">Project Title</h4>
+                                <p class="portfolio_section__rewiev-info-hover-text">Design</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div data-menulist="development" class="portfolio_section__rewiev-block-info">
+                        <a data-fslightbox="gallery" href="/assets/images/portfolio4.jpg" class="portfolio_section__rewiev-link">
+                            <img src="/assets/images/portfolio4.jpg" class="portfolio_section__rewiev-img">
+                            <div class="portfolio_section__rewiev-info-hover">
+                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <h4 class="portfolio_section__rewiev-info-hover-title">Project Title</h4>
+                                <p class="portfolio_section__rewiev-info-hover-text">Marketing</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div data-menulist="marketing" class="portfolio_section__rewiev-block-info">
+                        <a data-fslightbox="gallery" href="/assets/images/portfolio5.jpg" class="portfolio_section__rewiev-link">
+                            <img src="/assets/images/portfolio5.jpg" class="portfolio_section__rewiev-img">
+                            <div class="portfolio_section__rewiev-info-hover">
+                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <h4 class="portfolio_section__rewiev-info-hover-title">Project Title</h4>
+                                <p class="portfolio_section__rewiev-info-hover-text">Development</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div data-menulist="marketing"  class="portfolio_section__rewiev-block-info">
+                        <a data-fslightbox="gallery" href="/assets/images/portfolio6.jpg" class="portfolio_section__rewiev-link">
+                            <img src="/assets/images/portfolio6.jpg" class="portfolio_section__rewiev-img">
+                            <div class="portfolio_section__rewiev-info-hover">
+                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                <h4 class="portfolio_section__rewiev-info-hover-title">Project Title</h4>
+                                <p class="portfolio_section__rewiev-info-hover-text">Marketing</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="service-section__text-content-button-cv ">
+                <a class="text-content__button-cv-link" href="#">
+                    More Project
+                </a>
+            </div>
+        </section>
+        <!-- END Section Portfolio -->
+
+        `
+        <script type="module" src="assets/js/main.js"></script>
     </main>
 
    
@@ -503,6 +610,7 @@
         new Slider(".content-section_clips");
         new ShirinkMenu();  
         new Show_content();
+        new PortfolioLogic();
      </script>
 </body>
 
