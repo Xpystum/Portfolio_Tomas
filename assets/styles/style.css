@@ -121,6 +121,24 @@ section{
     opacity: 1 !important;
 }
 
+.portfolio_section__list-active{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    cursor: pointer;
+
+    color: #fff !important;
+    background-color: #eb2f06;
+    border-radius: 20px;
+}
+
+.portfolio_section__rewiev-scale{
+    opacity: 1 !important;
+    height: auto !important;
+    width: 33% !important;
+    scale: 1 !important; 
+}
+
 /* END Логика JS */
 
 
@@ -995,6 +1013,179 @@ main{
 /* END SECTION RESUME */
 
 
+/* START SECTION PORTFOLIO */
+
+.portfolio_section{
+    background-color: #1b1c1f;
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+
+.portfolio_section__wrapp-menu{
+    padding: 10px 0 10px 0;
+}
+
+.portfolio_section__menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.portfolio_section__menu{
+    padding: 5px 20px;
+}
+
+.portfolio_section__list{
+    margin: 0 4px 0 4px;
+    padding: 5px 16px;
+    font-size: 0.85rem;
+    color: #F79F1F;
+    font-weight: 400;
+    line-height: 1.5;
+}   
+
+.portfolio_section__list:hover{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    cursor: pointer;
+
+    color: #fff;
+    background-color: #eb2f06;
+    border-radius: 20px;
+}
+
+.portfolio_section__rewiev-wrapp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio_section__rewiev-block-info{
+    scale: 0;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    width: 31%;
+    margin-bottom: 16px;
+    padding: 0 10px;
+    transition: all 0.6s ease;
+    
+}
+
+.portfolio_section__rewiev-img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.portfolio_section__rewiev-link{
+    transition: all 0.8s ease;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.portfolio_section__rewiev-link:hover .portfolio_section__rewiev-info-hover
+{
+    opacity: 1;
+    margin-top: 0px;
+}
+
+.portfolio_section__rewiev-link:hover .portfolio_section__rewiev-info-hover i{
+    transform: rotate(0);
+}
+
+.portfolio_section__rewiev-link:hover .portfolio_section__rewiev-info-hover .portfolio_section__rewiev-info-hover-text {
+    margin-top: 0;
+}
+
+.portfolio_section__rewiev-link:hover .portfolio_section__rewiev-info-hover .portfolio_section__rewiev-info-hover-title {
+    margin-bottom: 0;
+}
+
+
+
+.portfolio_section__rewiev-link:hover::before 
+{   
+    transition: all 0.1s ease;
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+
+.portfolio_section__rewiev-link::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27,28,31,0.6);
+    opacity: 0;
+}
+
+
+
+
+
+.portfolio_section__rewiev-info-hover{
+    
+    opacity: 0;
+    display: flex;
+    transition-delay:0s;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #eb2f06;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+}
+
+.portfolio_section__rewiev-info-hover > i {
+    font-size: 2.5rem;
+    color:#F79F1F;
+    width: max-content;
+    margin: 0 auto;
+    transform: rotate(360deg);
+    transition: all 0.4s ease;
+}
+
+.portfolio_section__rewiev-info-hover-text,
+.portfolio_section__rewiev-info-hover-title{
+    text-align: center;
+    color: #fff;
+    
+}
+
+.portfolio_section__rewiev-info-hover-text{
+    margin-top: -15px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color:#dedede;
+    font-weight: 300;
+}
+
+
+.portfolio_section__rewiev-info-hover-title{
+    transition: all 0.3s ease;
+    margin-bottom: -15px;
+    font-size: 1.5rem;
+}
+
+/* END SECTION PORTFOLIO */
+
 /* END MAIN */
 
 
@@ -1286,12 +1477,19 @@ main{
 
     }
 
- 
-
-
-
    /* END SECTION RESUME   */
+
+   /* START SECTION SKILLS */
+
+   .skills_section__skill-part{
+    flex-direction: column;
+   }
+
+   .skills_section__block{
+    width: 100%;
+   }
   
+   /* END SECTION SKILLS */
 }
 
 
