@@ -10,6 +10,7 @@ export default class PortfolioLogic{
    
 
     constructor(){
+        // для улучшение нужпо переписать логику что бы dom документы создавались здесь
         this.set_element_assoativ();
         this.menu_switching();
         this.menu_select();
@@ -36,20 +37,11 @@ export default class PortfolioLogic{
                     timeMass.push(this.element_block[j]);
                 }
                 this.element_assoativ.set(this.element_list[i], timeMass)
-
                 
             }
             
         }
-        // for (let value of this.element_assoativ.values()) {
-        //     console.log("1:" , value);
-        // }
-
-        // for (let value of this.element_assoativ.keys()) {
-        //     console.log(value);
-        // }
-
-        // console.log(this.element_assoativ["all"]);
+      
         console.log(this.element_assoativ.get(this.element_list[0]));
     }
 
@@ -79,17 +71,12 @@ export default class PortfolioLogic{
                 for(let j = 0; j < this.element_block.length; j++){
                     if(this.element_block[j].classList.contains("portfolio_section__rewiev-scale")){
                         this.element_block[j].classList.remove("portfolio_section__rewiev-scale");
-                        // this.element_block[j].classList.add("display_none");
                     }
                 }
                 let massBlock = this.element_assoativ.get(this.element_list[i]);
 
                 for(let k = 0;  k < massBlock.length; k++){
                     massBlock[k].classList.add("portfolio_section__rewiev-scale");
-                    // if(!massBlock[k].classList.contains("portfolio_section__rewiev-scale")){
-                        
-                    //     // massBlock[k].classList.add("portfolio_section__rewiev-scale");
-                    // }
                 }
             }
 

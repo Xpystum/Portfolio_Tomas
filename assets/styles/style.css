@@ -132,11 +132,15 @@ section{
     border-radius: 20px;
 }
 
-.portfolio_section__rewiev-scale{
+.portfolio_section__rewiev-wrapp > .portfolio_section__rewiev-scale{
     opacity: 1 !important;
     height: auto !important;
-    width: 33% !important;
+    width: 31% ;
     scale: 1 !important; 
+    overflow: visible;
+
+    margin-bottom: 16px;
+    padding: 0 10px;
 }
 
 /* END Логика JS */
@@ -1062,6 +1066,7 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
 }
 
 .portfolio_section__rewiev-block-info{
@@ -1069,12 +1074,7 @@ main{
     opacity: 0;
     height: 0;
     width: 0;
-    overflow: hidden;
-    width: 31%;
-    margin-bottom: 16px;
-    padding: 0 10px;
-    transition: all 0.6s ease;
-    
+    transition: all 0.8s ease;
 }
 
 .portfolio_section__rewiev-img{
@@ -1228,7 +1228,7 @@ main{
 
     /* END SECTION Services */
     
-    
+
 
 }
 
@@ -1348,6 +1348,7 @@ main{
     }
 
     /* END SECTION Services */
+
 
 }
 
@@ -1490,6 +1491,20 @@ main{
    }
   
    /* END SECTION SKILLS */
+
+    /* START SECTION Portfolio */
+
+       .portfolio_section__rewiev-wrapp{
+            flex-direction: column;
+            width: 100% !important;
+        }
+
+        .portfolio_section__rewiev-scale{
+            width: 100% !important;
+        }
+       
+
+    /* END SECTION Portfolio */
 }
 
 
