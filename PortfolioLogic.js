@@ -1,6 +1,6 @@
 
 
-export default class PortfolioLogic{
+class PortfolioLogic{
 
     element_list = [...document.querySelectorAll('.portfolio_section__list')];
     element_block = [...document.querySelectorAll('.portfolio_section__rewiev-block-info')];
