@@ -41,8 +41,6 @@ export default class PortfolioLogic{
             }
             
         }
-      
-        console.log(this.element_assoativ.get(this.element_list[0]));
     }
 
     menu_switching(){
