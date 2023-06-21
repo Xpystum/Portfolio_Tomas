@@ -5,7 +5,8 @@ export default class Show_content{
       this.about_section();
       this.service_section();
       this.resume_section();
-      this.skills_section()
+      this.skills_section();
+      this.count_section();
     }
 
     about_section(){
@@ -149,6 +150,85 @@ export default class Show_content{
           observer.observe(elm);
       }
 
+    }
+
+    count_section(){
+
+      let elements = [...document.querySelectorAll('.count_section__wrap-count-area')];
+      let countBlock = [...document.querySelectorAll('.count_section__wrap-count-integer')];
+
+      function block_logic(timeOne, timeTwo, value){
+        // timeOne - милисекунду для внутреннего, timeTwo - милисекунду для внешнего, value - элемент
+        setTimeout(function run(){
+          let iterator = Number(value.textContent);
+          if(iterator <= value.dataset.count){
+            return; // сделали условие выхода из функции 
+          }
+
+          if(!isNaN(Number(value.textContent))) {
+            value.innerHTML = "" + (Number(value.textContent)) - 1; 
+          }
+          setTimeout(run, timeOne);
+        }, timeTwo);
+      }
+
+      function add_midofication_class(value){
+        value.parentNode.classList.add("count_section__wrap-count-block_opacity");
+        value.parentNode.classList.add("count_section__wrap-count-translatex");
+        value.classList.add("count_section__wrap-count-integer-translatey")
+      }
+
+      function onEntry(entry) {
+        entry.forEach(change => {
+         const { target, isIntersecting } = change; //Деструктурирующее присваивание
+
+          if (isIntersecting) {
+            for(let value of countBlock){
+              switch(value.dataset.count){
+                case '10':{
+                  block_logic(100,80,value);
+                  add_midofication_class(value);
+                break;
+                  
+                }
+
+                case '173':{
+                  block_logic(30,30,value);
+                  add_midofication_class(value);
+                break;
+
+                }
+
+                case '261': {
+                  block_logic(50,50,value);
+                  add_midofication_class(value);
+                break;
+
+                }
+
+                case '22': {
+                  block_logic(50,50,value);
+                  add_midofication_class(value);
+                break;
+
+                }
+                default:
+                  console.log("Error logic js in section count");
+                  break;
+              }
+            }
+          } 
+        });
+      }
+    
+      let options = { threshold: [0.2] }; //на каком % срабатывает при попадании sectiond в область viewport
+      let observer = new IntersectionObserver(onEntry, options);
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
+
+
+      
     }
     
     
