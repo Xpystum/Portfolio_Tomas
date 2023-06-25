@@ -1298,11 +1298,24 @@ main{
     height: auto;
 }
 
+
+
+
+.feedback_section__swiper-img-1{
+
+transform: rotate3d(1,1,1, 4deg) rotateZ(-2deg) translateY(-16px) scale(1.05);
+
+}
+
+.feedback_section__swiper-img-2{
+
+    transform: rotate3d(1,1,1, -1deg) rotateZ(-2deg) translateY(-16px) scale(1.05);
+
+}
+
 .feedback_section__swiper-img-3{
     /* transform: rotate3d(1,1,1, 10deg) rotateZ(-2deg);   */
 }
-
-
 
 /* END START SECTION FEEDBACK */
 
