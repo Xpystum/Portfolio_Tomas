@@ -647,6 +647,8 @@ main{
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: fit-content;
+    white-space:nowrap;
 }
 
 .text-content__description{
@@ -941,6 +943,8 @@ main{
 .content_box_resume__text{
     font-size: 0.8rem;
 }
+
+
 
 .skills_section{
     padding: 90px 0 60px 0;
@@ -1257,6 +1261,51 @@ main{
 }
 /* END SECTION COUNT */
 
+
+/* START SECTION FEEDBACK */
+
+.feedback_section{
+    padding-top: 90px;
+    padding-bottom: 60px;
+    background-color: rgb(27, 28, 31);
+}
+
+.feedback_section__swiper-picture{
+    width: 25%;
+}
+
+.feedback_section__swiper-text{
+    width: 65%;
+    height: 295px;
+    background-color: #888;
+}
+
+.feedback_section__wrap-review{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.feedback_section__wrapper-swiper-picture{
+    position: absolute;
+    width: 260px;
+    padding: 0 15px 0 15px;
+    overflow: hidden;
+}
+
+.feedback_section__swiper-img-general{
+    width: 100%;
+    height: auto;
+}
+
+.feedback_section__swiper-img-3{
+    /* transform: rotate3d(1,1,1, 10deg) rotateZ(-2deg);   */
+}
+
+
+
+/* END START SECTION FEEDBACK */
+
 /* END MAIN */
 
 
@@ -1426,6 +1475,7 @@ main{
    .skills_section__block{
     width: 100%;
    }
+
   
    /* END SECTION SKILLS */
 
