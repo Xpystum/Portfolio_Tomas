@@ -1315,7 +1315,7 @@ main{
     position: relative;
     width: 100%;
     height: auto;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
 }
 
 
