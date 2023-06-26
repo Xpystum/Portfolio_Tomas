@@ -143,6 +143,10 @@ section{
     padding: 0 10px;
 }
 
+.feedback_section__swiper-button-pagination-span-active{
+    opacity: 1 !important;
+}
+
 /* END Логика JS */
 
 
@@ -1276,7 +1280,6 @@ main{
 
 .feedback_section__swiper-text{
     width: 65%;
-    height: 295px;
     padding: 0 12px;
 }
 
@@ -1291,6 +1294,7 @@ main{
 .feedback_section__wrap-review{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
 }
@@ -1407,6 +1411,103 @@ main{
 .feedback_section__head-bottom-span{
     color: #eb2f06;
 }
+
+.feedback_section__swiper-button-pagination{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;    
+}
+
+.feedback_section__swiper-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.feedback_section__swiper-button-pagination-span{
+    display: block;
+    width: 45px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #F79F1F;
+    margin: 0 10px 0 10px;
+    opacity: 0.5;
+}
+
+
+.feedback_section__swiper-button{
+    width: 100%;
+}
+
+
+
+.feedback_section__swiper-button-arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.feedback_section__swiper-button-block{
+    background-color: #eb2f06;
+    width: 90px;
+    height: 45px;
+    border-radius: 12px;
+
+}
+
+.feedback_section__swiper-button-prev{
+    position: relative;
+    margin-right: 10px;
+
+}
+
+.feedback_section__swiper-button-prev::after{
+    content: '\f060';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.feedback_section__swiper-button-next{
+    position: relative;
+    margin-left: 10px;
+}
+
+.feedback_section__swiper-button-next::after{
+    content: '\f061';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 40px;
+}
+
+/* START Псевдоклассы */
+.feedback_section__swiper-button-next:hover::after{
+    color: #F79F1F;
+}
+
+.feedback_section__swiper-button-prev:hover::after{
+    color: #F79F1F;
+}
+
+.feedback_section__swiper-button-pagination-span:hover{
+    background-color: #eb2f06;
+    opacity:1;
+}
+
+/* END Псевдоклассы */
+
+
 
 /* END START SECTION FEEDBACK */
 
