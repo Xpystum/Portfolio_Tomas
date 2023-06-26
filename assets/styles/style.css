@@ -147,6 +147,10 @@ section{
     opacity: 1 !important;
 }
 
+.feedback_section__swiper-text-block-active{
+    opacity: 1 !important;
+}
+
 /* END Логика JS */
 
 
@@ -1317,15 +1321,18 @@ main{
 
 .feedback_section__swiper-img-1{
     transform: rotate3d(1,1,1, 4deg) rotateZ(-2deg) translateY(-16px) scale(1.05);
+    border-radius: 6px;
 }
 
 .feedback_section__swiper-img-2{
     transform: rotate3d(1,1,1, -1deg) rotateZ(-2deg) translateY(-16px) scale(1.05);
+    border-radius: 6px;
 }
 
 .feedback_section__swiper-img-3{
     position: relative;
     transform: rotate3d(1,1,1, 6deg) rotateZ(-4deg) translateY(-16px) scale(1.05);
+    border-radius: 6px;
 }
 
 .feedback_section__wrapper-swiper-picture-img1::before{
@@ -1339,6 +1346,7 @@ main{
     width: calc(100% - 30px);
     height: 100%;
     background-color: #111;
+    border-radius: 6px;
 }   
 
 .feedback_section__wrapper-swiper-picture-img2::before{
@@ -1352,6 +1360,7 @@ main{
     width: calc(100% - 30px);
     height: 100%;
     background-color: #111;
+    border-radius: 6px;
 } 
 
 .feedback_section__wrapper-swiper-picture-img2::before{
@@ -1365,12 +1374,14 @@ main{
     width: calc(100% - 30px);
     height: 100%;
     background-color: #111;
+    border-radius: 6px;
 } 
 
 .feedback_section__swiper-img-general-active{
-    z-index: 1;
+    z-index: 2;
     transform: none;
     border: 2px solid #ccc;
+    border-radius: 8px;
 }
 
 .feedback_section__head-joint{
@@ -1423,7 +1434,6 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
 }
 
 .feedback_section__swiper-button-pagination-span{
@@ -1434,6 +1444,7 @@ main{
     background-color: #F79F1F;
     margin: 0 10px 0 10px;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 
@@ -1455,6 +1466,7 @@ main{
     width: 90px;
     height: 45px;
     border-radius: 12px;
+    cursor: pointer;
 
 }
 
@@ -1507,7 +1519,22 @@ main{
 
 /* END Псевдоклассы */
 
+.feedback_section__swiper-text{
+    position: relative;
+    height: 290px;
+}
 
+.feedback_section__swiper-text-abstract-block{
+    position: relative;
+    height: 290px;
+}
+
+.feedback_section__swiper-text-block{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
 
 /* END START SECTION FEEDBACK */
 
