@@ -127,7 +127,7 @@ export default class FeedbackLogic{
 
         if(!Number.isNaN(integer)){
            if(typeof(integer) == "string"){
-                Number(integer);
+                integer = Number(integer);
            }
         }
     
