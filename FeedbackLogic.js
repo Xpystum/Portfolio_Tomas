@@ -1,11 +1,13 @@
+"use strict";
 
-class FeedbackLogic{
-    element_img = null; 
-    element_text = null;
-    element_pagination = null;
-    element_button_arrow = null;
 
-    iterator_img_and_text = 1;
+class FeedbackLogic {
+    // element_img = null; 
+    // element_text = null;
+    // element_pagination = null;
+    // element_button_arrow = null;
+
+    // iterator_img_and_text = 1;
     
 
     constructor(){
