@@ -1291,6 +1291,7 @@ main{
     color: #aaa;
 }
 
+
 .feedback_section__head-bottom{
     color: #888;
 }
@@ -1363,19 +1364,6 @@ main{
     border-radius: 6px;
 } 
 
-/* .feedback_section__wrapper-swiper-picture-img3::before{
-    content: "";
-    position: absolute;
-    z-index: 1;
-    opacity: 0.7;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%) rotate3d(1,1,1, 3deg) rotateZ(-3deg) translateX(-20px) translateY(0px) scale(0.9);
-    width: calc(100% - 30px);
-    height: 100%;
-    background-color: #111;
-    border-radius: 6px;
-}  */
 
 .feedback_section__swiper-img-3::before{
     content: "";
@@ -1391,12 +1379,18 @@ main{
     border-radius: 6px;
 }
 
+.feedback_section__head-img{
+    display: none;
+
+}
+
 .feedback_section__swiper-img-general-active{
     z-index: 2;
     transform: none;
     border: 2px solid #ccc;
     border-radius: 8px;
     transform: translateY(5px) scale(1);
+    opacity: 1;
 }
 
 
@@ -1537,7 +1531,7 @@ main{
 
 .feedback_section__swiper-text{
     position: relative;
-    height: 290px;
+    min-height: 290px;
 }
 
 .feedback_section__swiper-text-abstract-block{
@@ -1550,6 +1544,7 @@ main{
     top: 0;
     left: 0;
     opacity: 0;
+    transition: all 0.7s ease;
 }
 
 /* END START SECTION FEEDBACK */
@@ -1576,6 +1571,11 @@ main{
     .container{
         width: 960px;
     }
+    
+
+    .feedback_section__swiper-text{
+        width: 60%;
+    }
 }
 
 /* Portrait tablets and small desktops */
@@ -1585,6 +1585,8 @@ main{
     .container{
         width: 720px;
     }
+
+    
 
 
     /* START SECTION Services */
@@ -1596,11 +1598,61 @@ main{
 
     /* END SECTION Services */
     
-
+  
 
 }
 
 @media (max-width: 992px){
+
+     /* START SECTIOM About */
+     .about-section__text-content{
+        transform: translateX(0);
+    }
+    /* END SECTION About */
+
+    /* START SECIONT FEEDBACK */
+
+    .feedback_section__swiper-button{
+        margin-top: 15px;
+    }
+    
+    .feedback_section__swiper-text-abstract-block{
+        display: none;
+    }
+
+    .feedback_section__swiper-text-block-active{
+        position: relative;
+    }
+
+    .feedback_section__swiper-picture{
+        display: none;
+    }
+
+    .feedback_section__swiper-text{
+        width: 100%;
+    }
+
+    .feedback_section__head-joint{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feedback_section__head-img{
+        display: block;
+        /* position: absolute; */
+        opacity: 1;
+        width: 100px;
+        transform: none;
+    }
+    
+ 
+
+    .feedback_section__head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* END SECTION FEEDBACK */
 
     /* START SECTION ABOUT */
 
@@ -1760,6 +1812,8 @@ main{
         width: 540px;
     }
 
+   
+
     /* START SECTIO ONE */
 
     .container__content-section-one{
@@ -1776,7 +1830,7 @@ main{
     }
 
     .content-section{
-        font-size: 2.5rem !important;
+        font-size: 2.5rem;
     }
 
     .home-section{
@@ -1896,11 +1950,73 @@ main{
         padding: 0 20px;
     }
 
+    
+    /* START SECION Home */
+    .home-section{
+        height: 450px;
+    }
+
+    .content-section__title-clip{
+        font-size: 1.5rem;
+    }
+    /* END SECTION HOME*/
+
+
+
+
+
+    /* START SECTION About */
+
     .about-section__img{
         transform: translateX(-2.5%);
     }
 
+    /* END SECTION About */
 
+    /* START SECTION Feedback */
+
+    .feedback_section__swiper-button-arrow{
+        display: none;
+    }
+
+    .feedback_section__swiper-button{
+        position: relative;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .feedback_section__swiper-text-abstract-block{
+        height: 350px;
+    }
+
+    .content-section_clips{
+        overflow-wrap: anywhere;
+    }
+
+    .clips__b{
+        overflow-wrap: anywhere;
+    }
+
+    .content-section__head-text{
+        max-width: 100%;
+    }
+
+    /* END SECTION Feedback */
+
+
+    .portfolio_section__list{
+        padding: 4px 4px;
+    }
+
+    .about-section__img::after{
+        width: 140px;
+        height: 140px;
+    }
+
+    .about-section__img::before{
+        width: 140px;
+        height: 140px;
+    }
 }
 
 
