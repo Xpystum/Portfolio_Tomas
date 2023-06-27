@@ -1,8 +1,5 @@
+
 class FeedbackLogic{
-
-    // data-swiper-pagination="1"
-    // data-swiper-img="1"  
-
     element_img = null; 
     element_text = null;
     element_pagination = null;
@@ -12,21 +9,18 @@ class FeedbackLogic{
     
 
     constructor(){
-        
         this.element_img = [...document.querySelectorAll('.feedback_section__swiper-img-general')];
         this.element_text = [...document.querySelectorAll('.feedback_section__swiper-text-block')];
         this.element_pagination = [...document.querySelectorAll(".feedback_section__swiper-button-pagination-span")];
         this.element_button_arrow = [...document.querySelectorAll(".feedback_section__swiper-button-block")];
 
         this.menu_switching_pagination();
-        this. menu_switching_arrow_button();
+        this.menu_switching_arrow_button();
     }
-
 
     menu_switching_pagination(){
 
         let element_img = this.element_img;
-        let element_text = this.element_text;
         for(let value of this.element_pagination) {
             value.addEventListener("click", (event)=>{
                 for(let value of element_img){
@@ -200,6 +194,5 @@ class FeedbackLogic{
             }
         }
     }
-
 
 }

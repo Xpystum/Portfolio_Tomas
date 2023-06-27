@@ -7,9 +7,7 @@ import show_content from './Show_content.js';
 import './anchor.js'; 
 import PortfolioLogic from '../../PortfolioLogic.js'
 import './fslightbox.js'
-import PortfolioLogic from './PortfolioLogic.js'
 import FeedbackLogic from './FeedbackLogic.js'
-
 
 new Burger(".menu__button-burger",".nav-menu");
 new Slider(".content-section_clips");
