@@ -2,8 +2,8 @@
 
 class PortfolioLogic{
 
-    element_list = [...document.querySelectorAll('.portfolio_section__list')];
-    element_block = [...document.querySelectorAll('.portfolio_section__rewiev-block-info')];
+    element_list = null;
+    element_block = null;
     
     element_assoativ = new Map();
 
@@ -11,9 +11,12 @@ class PortfolioLogic{
 
     constructor(){
         // для улучшение нужпо переписать логику что бы dom документы создавались здесь
+        this.element_list = [...document.querySelectorAll('.portfolio_section__list')];
+        this.element_block = [...document.querySelectorAll('.portfolio_section__rewiev-block-info')];
         this.set_element_assoativ();
         this.menu_switching();
         this.menu_select();
+       
     }
 
     
