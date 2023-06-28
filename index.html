@@ -81,10 +81,9 @@
 
    </header>
    <!-- END HEADER -->
-
    
+   <!-- START MAIN -->
     <main class="main">
-
         <!-- START Section Home -->
         <section id="home" data-anchor="home" class="home-section">
             <div class="home-section__container container">
@@ -921,7 +920,7 @@
         <section class="contact-section" id="contact">
             <div class="contact-section__container container">
 
-                <div class="contact-section__wrap-title">
+                <div class="contact_section__wrap-title">
                     <div class="portfolio_section__text-content__header text-content__header">
                         <h2 class="text-content__header-h2 header-h2_letter_spacing">CONTACT</h2>
                         <span class="text-content__header-span">Send Message</span>
@@ -929,10 +928,10 @@
                 </div>
 
                 <div class="contact-section__field">
-                    <div class="contact-section__info">
+                    <div class="contact-section__info contact-section__field-block">
                         <div class="contact-section__info-bloc contact-section__info-location">
                             <i class="fas fa-street-view"></i>
-                            <h5>
+                            <h5 class="contact-section__info-location-h5">
                                 Location
                                 <a href="#">
                                     <i class="fas fa-external-link-alt"></i>
@@ -944,6 +943,7 @@
                         <div class="contact-section__info-bloc contact-section__info-email">
                             <i class="fa-solid fa-envelope"></i>
                             <h5>Email</h5>
+                            <a href="#">Tomas@example.com</a>
                         </div>
 
                         <div class="contact-section__info-bloc contact-section__info-phone">
@@ -972,18 +972,18 @@
                         </div>
                     </div>
 
-                    <div class="contact-section__field-form">
+                    <div class="contact-section__field-form contact-section__field-block">
                         <form class="contact-section__form" action="#">
-                            <div class="contact-section__form-name">
+                            <div class="contact-section__form-name contact-section__form-bloc">
                                 <input type="text" required placeholder="Name"> 
                             </div>
 
-                            <div class="contact-section__form-email">
+                            <div class="contact-section__form-email contact-section__form-bloc">
                                 <input type="email" required placeholder="Email"> 
                             </div>
 
-                            <div class="contact-section__form-message">
-                                <textarea type="text" required placeholder="Message"> 
+                            <div class="contact-section__form-message contact-section__form-bloc">
+                                <textarea type="text" required placeholder="Message"></textarea>
                             </div>
                             <button type="submit">Send Message</button>
                         </form>
@@ -994,8 +994,27 @@
         </section>
         <!-- END Section Contact -->
 
-
     </main>
+    <!-- END MAIN -->
+
+
+    <!-- START FOOTER -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <p class="footer__text">
+                © 2022 Tomas , All Right Reserved
+            </p>
+            <div class="footer__link">
+                <a href="#">Privacy Policy</a>
+                <span></span>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <a href="#" class="footer-container-scroll">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
 
     <!-- START modal window -->
     <div class="hystmodal" id="blog1" aria-hidden="true">
@@ -1240,8 +1259,8 @@
     </div>
     <!-- END modal window -->
     
-    <script type="module" src="assets/js/main.js"></script>
-    <script src="assets/js/hystmodal.min.js"></script>
+    <script type="module" src="assets/js/main.js";></script>
+    <script src="assets/js/hystmodal.min.js";></script>
 
     <script>
        

@@ -3,7 +3,7 @@
 import Slider from './slider.js';
 import Burger from './Burger.js';
 import ShirinkMenu from './ShirinkMenu.js';
-import show_content from './Show_content.js'; 
+import show_content from './show_content.js'; 
 import './anchor.js'; 
 import './fslightbox.js'
 import PortfolioLogic from './PortfolioLogic.js'
@@ -21,4 +21,10 @@ const myModal = new HystModal({
     // настройки (не обязательно), см. API
 });
 
+
+let element = document.querySelector(".footer-container-scroll");
+
+element.addEventListener("click",(event)=>{
+    window.scrollTo(0,0)
+});
 
