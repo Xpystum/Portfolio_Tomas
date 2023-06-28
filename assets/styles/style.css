@@ -219,8 +219,6 @@ header{
     padding: 15px 0;
     box-shadow: 0 0.125rem 0.25rem rgba(255,255,255,.125);
 
-    display: none;
-
     transition: 0.3s;
 
 }
@@ -1591,6 +1589,10 @@ main{
 .blog-section__content_box_active{
     opacity: 1;
     transform: translateY(0);
+}
+
+.modal-link{
+    cursor: pointer;
 }
 
 .blog-section__content_box-link-img{

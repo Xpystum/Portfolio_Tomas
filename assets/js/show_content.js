@@ -8,6 +8,7 @@ export default class Show_content{
       this.skills_section();
       this.count_section();
       this.feedback_section();
+      this.blog_section();
     }
 
     about_section(){
@@ -257,7 +258,7 @@ export default class Show_content{
 
     }
     
-    feedback_section(){
+    blog_section(){
 
       let elements = [...document.querySelectorAll('.blog-section')];
       let elementActive = [...document.querySelectorAll('.blog-section__content_box')];
@@ -285,6 +286,8 @@ export default class Show_content{
       for (let elm of elements) {
           observer.observe(elm);
       }
+
+      
 
     }
   
