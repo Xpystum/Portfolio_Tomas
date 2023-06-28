@@ -123,7 +123,6 @@ class FeedbackLogic {
 
         if(!Number.isNaN(integer)){
            if(typeof(integer) == "string"){
-            
                 integer = Number(integer);
            }
         }

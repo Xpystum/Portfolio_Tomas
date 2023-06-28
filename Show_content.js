@@ -7,7 +7,10 @@ class Show_content{
       this.resume_section();
       this.skills_section()
       this.count_section();
-  }
+      this.feedback_section();
+      this.blog_section();
+    }
+
 
     about_section(){
 
@@ -121,7 +124,7 @@ class Show_content{
     skills_section(){
       
       let elements = [...document.querySelectorAll('.skills_section__skill-loader-progress')];
-      let progressInteger = [...document.querySelectorAll('.skills_section__skill-loader-progress-integer')];
+      // let progressInteger = [...document.querySelectorAll('.skills_section__skill-loader-progress-integer')];
 
       function onEntry(entry) {
         entry.forEach(change => {
@@ -230,7 +233,63 @@ class Show_content{
       
     }
     
+    feedback_section(){
+      
+      let elements = [...document.querySelectorAll('.feedback_section')];
+      let elementActive = document.querySelector('.feedback_section__swiper-picture');
+
+      function onEntry(entry) {
+        entry.forEach(change => {
+         const { target, isIntersecting } = change; //Деструктурирующее присваивание
+          if (isIntersecting) {
+
+            elementActive.classList.add("feedback_section__swiper-picture_active");
+           
+          }
+        });
+      }
     
+      let options = { threshold: [0.2] }; //на каком % срабатывает при попадании sectiond в область viewport
+      let observer = new IntersectionObserver(onEntry, options);
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
+
+
+    }
+    
+    blog_section(){
+
+      let elements = [...document.querySelectorAll('.blog-section')];
+      let elementActive = [...document.querySelectorAll('.blog-section__content_box')];
+
+      function onEntry(entry) {
+        entry.forEach(change => {
+         const { target, isIntersecting } = change; //Деструктурирующее присваивание
+          if (isIntersecting) {
+            let time = 100;
+            for(let value of elementActive){
+
+              setTimeout(function tick() {
+                value.classList.add("blog-section__content_box_active");
+                ;
+              }, time);
+              time = time + 250;
+            }
+           
+          }
+        });
+      }
+    
+      let options = { threshold: [0.2] }; //на каком % срабатывает при попадании sectiond в область viewport
+      let observer = new IntersectionObserver(onEntry, options);
+      for (let elm of elements) {
+          observer.observe(elm);
+      }
+
+      
+
+    }
   
     h2_animation_content(){
 
