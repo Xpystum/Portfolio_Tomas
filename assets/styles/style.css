@@ -1717,6 +1717,12 @@ main{
 }
 /* END SECTION Blog */
 
+/* START SECTION Contact */
+.contact-section__field{
+    margin-top: 30px;
+}
+/* END SECTION Contact */
+
 /* END MAIN */
 
 
