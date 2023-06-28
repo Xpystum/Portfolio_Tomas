@@ -810,7 +810,7 @@
 
                     <div class="blog-section__content_box blog-section__content_box1">
 
-                        <a class="blog-section__content_box-link" href="#">
+                        <a data-hystmodal="#blog1" class="blog-section__content_box-link" href="#">
                             <img class="blog-section__content_box-link-img" src="assets/images/blog1.jpg" alt="content-blog">
                             <span class="blog-section__content_box-link-span">Web</span>
                         </a>
@@ -841,8 +841,7 @@
                     </div>
 
                     <div class="blog-section__content_box blog-section__content_box2">
-                        
-                        <a class="blog-section__content_box-link" href="#">
+                        <a data-hystmodal="#blog2" class="blog-section__content_box-link" href="#">
                             <img class="blog-section__content_box-link-img" src="assets/images/blog2.jpg" alt="content-blog">
                             <span class="blog-section__content_box-link-span">Mobily</span>
                         </a>
@@ -874,7 +873,7 @@
 
                     <div class="blog-section__content_box blog-section__content_box3">
                         
-                        <a class="blog-section__content_box-link" href="#">
+                        <a data-hystmodal="#blog3" class="blog-section__content_box-link" href="#">
                             <img class="blog-section__content_box-link-img" src="assets/images/blog3.jpg" alt="content-blog">
                             <span class="blog-section__content_box-link-span">Design</span>
                         </a>
@@ -916,12 +915,12 @@
             </div>
         </section>
 
-        <a href="#" data-hystmodal="#myModal">Показать окно с id=myModal</a>
+        
 
-        <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal" id="blog1" aria-hidden="true">
             <div class="hystmodal__wrap">
                 <div class="container">
-                    <div class="hystmodal__window modal_window_css" role="dialog" aria-modal="true">
+                    <div aria-labelledby="blog1" class="hystmodal__window modal_window_css" role="dialog" aria-modal="true">
                         <button data-hystclose class="hystmodal__close">Закрыть</button>
                         <span class="pop-info">
                             Blog-Details<a href="#">Mobile</a>
@@ -1001,7 +1000,248 @@
 
     </main>
 
+    <!-- START modal window -->
+    <div class="hystmodal" id="blog1" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="container">
+                <div aria-labelledby="blog1" class="hystmodal__window modal_window_css" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <span class="pop-info">
+                        Blog-Details<a href="#">Web</a>
+                    </span>
+                    <img class="hystmodal__window-img" src="assets/images/blog1.jpg" alt="Blog Images">
+                    <div class="modal-text">
+                        <h3 class="modal-text__blog-title">Flutter technology</h3>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+                            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                            aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                        </p>
 
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. 
+                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. 
+                            A small river named Duden flows by their place and supplies it with the necessary regelialia. 
+                            It is a paradisematic
+                        </p>
+
+                        <div class="modal-text__blog-quote">
+                            <q>
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
+                                Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. 
+                                Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
+                            </q>
+                        </div>
+
+                        <p>
+                            A wonderful serenity has taken possession of my entire soul, 
+                            like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of
+                            existence in this spot, which was created for the bliss of souls like mine. 
+                            I am so happy, my dear friend, so absorbed in
+                        </p>
+
+                        <div class="modal-text__blog-footer">
+                            <div class="modal-text__blog-footer-icon">
+                                <span>Share:</span>
+                                <ul>
+                                    <li>
+                                        <a class="list_item-link" href="#" title="facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="list_item-link" href="" title="twitter">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a class="list_item-link" href="" title="instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a class="list_item-link" href="" title="linkedin">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                            <span class="modal-text__blog-footer-date">
+                                26 Oct 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="blog2" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="container">
+                <div aria-labelledby="blog1" class="hystmodal__window modal_window_css" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <span class="pop-info">
+                        Blog-Details<a href="#">Mobile</a>
+                    </span>
+                    <img class="hystmodal__window-img" src="assets/images/blog2.jpg" alt="Blog Images">
+                    <div class="modal-text">
+                        <h3 class="modal-text__blog-title">Flutter technology</h3>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+                            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                            aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                        </p>
+
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. 
+                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. 
+                            A small river named Duden flows by their place and supplies it with the necessary regelialia. 
+                            It is a paradisematic
+                        </p>
+
+                        <div class="modal-text__blog-quote">
+                            <q>
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
+                                Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. 
+                                Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
+                            </q>
+                        </div>
+
+                        <p>
+                            A wonderful serenity has taken possession of my entire soul, 
+                            like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of
+                            existence in this spot, which was created for the bliss of souls like mine. 
+                            I am so happy, my dear friend, so absorbed in
+                        </p>
+
+                        <div class="modal-text__blog-footer">
+                            <div class="modal-text__blog-footer-icon">
+                                <span>Share:</span>
+                                <ul>
+                                    <li>
+                                        <a class="list_item-link" href="#" title="facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="list_item-link" href="" title="twitter">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a class="list_item-link" href="" title="instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a class="list_item-link" href="" title="linkedin">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                            <span class="modal-text__blog-footer-date">
+                                26 Oct 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="blog3" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="container">
+                <div aria-labelledby="blog1" class="hystmodal__window modal_window_css" role="dialog" aria-modal="true">
+                    <button data-hystclose class="hystmodal__close">Закрыть</button>
+                    <span class="pop-info">
+                        Blog-Details<a href="#">Design</a>
+                    </span>
+                    <img class="hystmodal__window-img" src="assets/images/blog1.jpg" alt="Blog Images">
+                    <div class="modal-text">
+                        <h3 class="modal-text__blog-title">Flutter technology</h3>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+                            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                            aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+                        </p>
+
+                        <p>
+                            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. 
+                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. 
+                            A small river named Duden flows by their place and supplies it with the necessary regelialia. 
+                            It is a paradisematic
+                        </p>
+
+                        <div class="modal-text__blog-quote">
+                            <q>
+                                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.
+                                Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. 
+                                Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
+                            </q>
+                        </div>
+
+                        <p>
+                            A wonderful serenity has taken possession of my entire soul, 
+                            like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of
+                            existence in this spot, which was created for the bliss of souls like mine. 
+                            I am so happy, my dear friend, so absorbed in
+                        </p>
+
+                        <div class="modal-text__blog-footer">
+                            <div class="modal-text__blog-footer-icon">
+                                <span>Share:</span>
+                                <ul>
+                                    <li>
+                                        <a class="list_item-link" href="#" title="facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="list_item-link" href="" title="twitter">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a class="list_item-link" href="" title="instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                   
+                                    <li>
+                                        <a class="list_item-link" href="" title="linkedin">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+
+                            <span class="modal-text__blog-footer-date">
+                                26 Oct 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END modal window -->
     
     <script type="module" src="assets/js/main.js"></script>
     <script src="/assets/js/hystmodal.min.js"></script>
