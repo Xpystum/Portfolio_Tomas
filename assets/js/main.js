@@ -15,3 +15,8 @@ new ShirinkMenu();
 new show_content();
 new PortfolioLogic();
 new FeedbackLogic();
+
+const myModal = new HystModal({
+    linkAttributeName: "data-hystmodal",
+    // настройки (не обязательно), см. API
+});

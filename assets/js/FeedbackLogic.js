@@ -1,7 +1,5 @@
 export default class FeedbackLogic{
 
-    // data-swiper-pagination="1"
-    // data-swiper-img="1"  
 
     element_img = null; 
     element_text = null;
