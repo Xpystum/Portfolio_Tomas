@@ -89,12 +89,13 @@ section{
 
 .header-h2_letter_spacing{
     letter-spacing: 60px;
+    position: absolute;
  }
 
 .header-h2_active{
-    
+    position: relative !important;
     letter-spacing: 0 !important;
-    display: block !important;
+    visibility: visible !important;
 }
 
 
@@ -646,6 +647,7 @@ main{
     line-height: 3.5rem;
     font-weight: 700;
     user-select: none;
+    visibility: hidden;
 }
 
 .text-content__header-span{
@@ -2131,7 +2133,7 @@ footer{
     .text-content__header-h2{
         font-size: 3.5rem;
         line-height: 3.5rem;
-        display: none;
+        /* display: none; */
     }
 
     .text-content__header-span{
@@ -2449,7 +2451,21 @@ footer{
 @media (max-width: 560px) {
 
     html{
-        font-size: 10px;
+        font-size: 6px;
+    }
+
+    .about-section__img::after{
+        display: none;
+    }
+
+    .about-section__img::before{
+        display: none;
+    }
+
+    .about-section__img{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
     }
 
     .container{
