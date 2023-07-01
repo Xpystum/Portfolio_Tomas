@@ -303,9 +303,9 @@ class Show_content{
         }
 
 
-        let options = { threshold: [0.1] }; //на каком % срабатывает при попадании sectiond в область viewport
+        let options = { threshold: [0.1] }; //на каком % срабатывает при попадании section в область viewport
         let observer = new IntersectionObserver(onEntry, options);
-        let elements = document.querySelectorAll('.header-h2_letter_spacing');
+        let elements = document.querySelectorAll('.text-content__header-h2');
         for (let elm of elements) {
             observer.observe(elm);
         }
