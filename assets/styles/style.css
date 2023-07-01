@@ -88,7 +88,7 @@ section{
 }
 
 .header-h2_letter_spacing{
-    letter-spacing: 60px;
+    letter-spacing: 3rem;
     position: absolute;
  }
 
@@ -244,6 +244,7 @@ header{
     margin: 0 auto;
     width: 1320px;
     box-sizing: border-box;
+    overflow: hidden;
 
     padding: 0 12px;
 }
@@ -382,7 +383,7 @@ main{
 .content-section__into:before{
     content: " ";
     position: absolute;
-    top:-5px;
+    top:0px;
     left: -10px;
     z-index: -1;
     width: 35px;
@@ -1426,7 +1427,7 @@ main{
 }
 
 .feedback_section__head-review-details-h4{
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -2448,7 +2449,7 @@ footer{
 @media (max-width: 560px) {
 
     html{
-        font-size: 6px;
+        font-size: 4px;
     }
 
     .about-section__img::after{
@@ -2543,12 +2544,231 @@ footer{
         width: 140px;
         height: 140px;
     }
+
+    .contact-section__info-bloc-icon a{
+        width: 10%;
+        max-height: 10%;
+        border: 0;
+    }
+
+    .contact-section__info-bloc-icon a > i{
+        font-size: 5rem;
+    }
+
+    .contact-section__info-social > i{
+        display: none;
+    }
+
+    .contact-section__form button{
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    .blog-section__content_box-footer-content-button-link{
+        text-align: center;
+    }
+
+    .feedback_section__head-review-details-h4{
+        font-size: 6.5rem;
+    }
+
+    .resume-section-content-box{
+        padding-left: 0px;
+    }
+
+    .resume-section__content-education-header, .resume-section__content-experiences-header{
+        display: none;
+    }
+
+    .resume-section-content-box::before{display: none;}
+
+    .resume-section-content-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end
+    }
+
+    .content_box_resume__circle{
+        display: none;
+    }
+
+    .content_box_resume,
+    .content_box_resume__text,
+    .content_box_resume__title{
+        font-size: 4rem;
+    }
+
+
+
+    .resume-section__box-experiences,
+    .resume-section__box-education{
+        width: 100%;
+    }
+
+    .text-content__header {
+        min-height: 90px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .text-content__header-h2{
+        font-size: 7rem;
+    }
+
+    .text-content__header-span{
+        font-size: 3rem;
+    }
+
+    .skills_section__block{
+        font-size: 4rem;
+    }
+
+    .skills_section__skill-loader-progress-integer{
+        font-size: 4rem;
+    }
+
+    .portfolio_section__list{
+        font-size: 4rem;
+    }
+
+    .count_section__wrap-count-title{
+        font-size: 4rem;
+    }
+
+    .count_section__wrap-count-block > i{
+        font-size: 8rem;
+    }
+
+    .feedback_section__head-q{
+        font-size: 3rem;
+    }
+
+    .feedback_section__head-review-details-stars > i{
+        font-size: 4rem;
+    }
+
+    .feedback_section__head-bottom{
+        font-size: 4rem;
+    }
+
+    .portfolio_section__menu{
+        padding: 0;
+    }
+
+    .text-content__main-container-icon{
+        width: 45px;
+        height: 45px;
+        top: -10px;
+    }
+
+    .text-content__main-container-icon > i{
+        font-size: 4rem;
+    }
+
+    .text-content__main-h3{
+        font-size: 5rem;
+    }
+
+    .text-content__main-text{
+        font-size: 4rem;
+    }
+    .text-content__description{
+        font-size: 3rem;
+    }
+
+    .text-content__info-list li{
+        font-size: 4rem;
+    }
+
+    .text-content__header{
+        margin-bottom: 20px;
+    }
+
+    .content-section{
+        font-size: 6rem;
+    }
+
+    .list_item-link{
+        font-size: 4rem;
+    }
+
+    .list__link{
+        font-size: 3rem;
+    }
+
+    .contact-section__info-bloc i{
+        font-size: 12rem;
+    }
+
+    .contact-section__info-bloc h5{
+        font-size: 4rem;
+    }
+
+    
+    .contact-section__info-bloc address{
+        font-size: 2.5rem;
+        margin-left: 50px;
+
+    }
+
+    .contact-section__info-location-h5 i{
+        font-size: 7rem;
+    }
+
+    .contact-section__info-bloc a{
+        font-size: 3rem;
+        padding-left: 12px;
+    }
+    
+    .blog-section__content_box-title{
+        font-size: 4rem;
+    }
+
+    .blog-section__content_box-text{
+        font-size: 3.5rem;
+    }
+
+    .blog-section__content_box-footer-content-link{
+        font-size: 4rem;
+    }
+    
+    .blog-section__content_box-footer-content-button{
+        width: 50%;
+        align-items: center;
+    }
+
+    .blog-section__content_box-footer-content-button-link{
+        font-size: 4rem;
+    }
+
+    .text-content__button-cv-link{
+        font-size: 4rem;
+    }
+
+    .content-section__into:before{
+        top: 0;
+    }
+
+    .footer__text{
+        font-size: 3.5rem;
+    }
+
+    .footer__link{
+        font-size: 3.5rem;
+    }
+    
+    .contact-section__field-block input{
+        font-size: 4rem;
+    }
+
+    .contact-section__field-block textarea{
+        font-size: 4rem;
+    }
 }
-
-
-
-
-
 
 
 
