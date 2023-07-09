@@ -7,7 +7,7 @@ export default class Slider{
 
 
         // this.Slider(El);
-        this.slider_ResizeObserver(El);
+        // this.slider_ResizeObserver(El);
 
     }
 
@@ -42,31 +42,31 @@ export default class Slider{
 
 
     // через slider_ResizeObserver
-    slider_ResizeObserver(Element){
-        let widthCount = window.getComputedStyle(Element);
-        let iteration = 0;
-        const ro = new ResizeObserver(entries => {
-            for (let entry of entries) {
+    // slider_ResizeObserver(Element){
+    //     let widthCount = window.getComputedStyle(Element);
+    //     let iteration = 0;
+    //     const ro = new ResizeObserver(entries => {
+    //         for (let entry of entries) {
                 
 
-                let widthRemPx = widthCount.width.replace("px",'');
-                let integerwidth = parseInt(widthRemPx);
-                if(integerwidth == 0){
+    //             let widthRemPx = widthCount.width.replace("px",'');
+    //             let integerwidth = parseInt(widthRemPx);
+    //             if(integerwidth == 0){
 
-                    Element.children[iteration].classList.toggle("display_block");
-                    iteration++;
-                    if(iteration == 3) {iteration = 0;}
-                    Element.children[iteration].classList.toggle("display_block");
+    //                 Element.children[iteration].classList.toggle("display_block");
+    //                 iteration++;
+    //                 if(iteration == 3) {iteration = 0;}
+    //                 Element.children[iteration].classList.toggle("display_block");
 
-                }
+    //             }
 
-            }
-          });   
+    //         }
+    //       });   
 
-        //   наблюдаем за блоком
-        ro.observe(Element);
+    //     //   наблюдаем за блоком
+    //     ro.observe(Element);
 
-    }
+    // }
 
     
 }
