@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     Array.from(mediaFiles).forEach((file) => {
       
-        images_clone = new Image();
-        images_clone.onload = img_count();
-        images_clone.onerror = img_count();
+        let images_clone = new Image();
+        images_clone.onload = img_count;
+        images_clone.onerror = img_count;
         images_clone.src = file.src;
 
     })
