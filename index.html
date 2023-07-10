@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/displayflex.css">
+    <link rel="stylesheet" href="assets/styles/preloade.css">
     <!-- END Style -->
 
     <!-- START Logic JS -->
@@ -31,9 +32,47 @@
     <!-- END Modal Window css -->
     
 </head>
-<body>
+<body class="body-hiden">
+
+    <!-- START PRELOADER -->
+        <div id="preloader" class="preloader">
+
+            <div class="preloader-title">
+                <span class="preloader-title-span">
+                    Tomas<span class="preloader-title-span-point">.</span>
+                </span>
+            </div>
+            <div class="preloader-wrapp">
+                <div class="preloade__loader">
+                    <div class="loadingio-spinner-spinner-bosfl1dhubg">
+                        <div class="ldio-xdx07ipet5c">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+        
+                    <span class="preloader__percents-integer">
+                        <span class="preloader__integer">0</span>
+                        <span class="preloader__percents">%</span>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    <!-- END PRELOADER -->
+
     <!-- START HEADER -->
-   <header class="header">
+   <header class="header header_hide">
 
        <div class="header__container container">
            <!-- START LOGO -->
@@ -92,7 +131,7 @@
    <!-- END HEADER -->
    
    <!-- START MAIN -->
-    <main class="main">
+    <main class="main main_hide">
         <!-- START Section Home -->
         <section id="home" data-anchor="home" class="home-section">
             <div class="home-section__container container">
@@ -1008,7 +1047,7 @@
 
 
     <!-- START FOOTER -->
-    <footer class="footer">
+    <footer class="footer footer_hide">
         <div class="footer-container container">
             <p class="footer__text">
                 © 2022 Tomas , All Right Reserved
@@ -1273,6 +1312,7 @@
     <script src="hystmodal.min.js"></script>
     <script type="text/javascript" src="anchor.js"></script>
     <script type="text/javascript" src="FeedbackLogic.js"></script>
+    <script type="text/javascript" src="preloader.js"></script>
     <script>
         new Burger(".menu__button-burger",".nav-menu");
         new Slider(".content-section_clips");

@@ -152,6 +152,30 @@ section{
     opacity: 1 !important;
 }
 
+.body-hiden {
+    overflow: hidden;
+    
+}
+
+
+.header_hide{
+    visibility: hidden;
+    overflow: hidden;
+    height: 0px;
+}
+
+.main_hide{
+    visibility: hidden;
+    overflow: hidden;
+    height: 0px;
+}
+
+.footer_hide{
+    visibility: hidden;
+    overflow: hidden;
+    height: 0px;
+}
+
 /* END Логика JS */
 
 
@@ -629,6 +653,8 @@ main{
     width: fit-content;
     margin-bottom: 30px;
     margin: 0px auto 10px auto;
+    visibility: inherit;
+    
 }
 
 .content__header{
