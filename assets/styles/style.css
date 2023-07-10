@@ -154,21 +154,25 @@ section{
 
 .body-hiden {
     overflow: hidden;
+    
 }
 
 
 .header_hide{
     visibility: hidden;
+    overflow: hidden;
     height: 0px;
 }
 
 .main_hide{
     visibility: hidden;
+    overflow: hidden;
     height: 0px;
 }
 
 .footer_hide{
     visibility: hidden;
+    overflow: hidden;
     height: 0px;
 }
 

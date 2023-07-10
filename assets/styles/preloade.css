@@ -36,6 +36,10 @@
     transform: translate(-50%,-50%);
 }
 
+.wrapp-adaptiv-preloader{
+  width: 100%;
+}
+
 .preloader-title{
     position: relative;
 }
@@ -51,19 +55,14 @@
 }
 
 .preloader__percents-integer{
+    font-size: 0.85rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.preloader__integer{
-    transition: all 1s ease;
-}
 
-.preloader__percents-integer{
-    transition: all 1s ease;
-}
 
 .preloader__percents-integer span{
     color: #eb2f06;
@@ -167,3 +166,36 @@
     transform-origin: 0 0; /* see note above */
   }
   .ldio-xdx07ipet5c div { box-sizing: content-box; }
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+  .preloader-title{
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px){
+  .preloader-title{
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .preloader-title{
+    margin-bottom: 50px;
+    font-size: 5rem;
+  }
+
+  .preloader__percents-integer{
+    font-size: 2.5rem;
+  }
+
+  .ldio-xdx07ipet5c div{
+    width: 1.5rem;
+    height: 3.5rem;
+  }
+
+}
